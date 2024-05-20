@@ -1,0 +1,30 @@
+.header{
+    width: 100%;
+    height: 200px;
+    background-image: url(https://cdn.pixabay.com/photo/2013/09/15/06/59/medellin-182316_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#img-home{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#imghome img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#welcome{
+    width: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

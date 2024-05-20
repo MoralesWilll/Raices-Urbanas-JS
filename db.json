@@ -1,0 +1,57 @@
+{
+    "zone":[
+        {
+            "id" : 1,
+            "name" : "Laureles"
+        },
+        {
+            "id" : 2,
+            "name" : "Belen"
+        },
+        {
+            "id" : 3,
+            "name" : "Poblado"
+        },
+        {
+            "id" : 4,
+            "name" : "Envigado"
+        },
+        {
+            "id" : 5,
+            "name" : "Sabaneta"
+        }
+    ],
+    "property-type":[
+        {
+            "id" : 1,
+            "name" : "Apartamento"
+        },
+        {
+            "id" : 2,
+            "name" : "Casa"
+        }
+    ],
+    "PropertyObjective":[
+        {
+            "id" : 1,
+            "name" : "Arrendamiento"
+        },
+        {
+            "id" : 2,
+            "name" : "Venta"
+        }
+    ],
+    "users" :[],
+    "roles":[
+        {
+            "id": 1,
+            "name": "Usuario"
+        },
+        {
+            "id": 2,
+            "name": "Propietario"
+        }
+        
+    ],
+    "Properties":[]
+  }
