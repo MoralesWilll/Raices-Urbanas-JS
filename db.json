@@ -51,17 +51,21 @@
         "roles": "1"
         }
     ],
-    "owner":[
+    "roles":[
         {
-        "id": 1,
-        "username": "Juan",
-        "email": "juanperez@gmail.com",
-        "phone": "3216549870",
-        "password": "123456",
-        "roles": "1",
-        "properties":[]
+            "id": 1,
+            "name": "Usuario"
+        },
+        {
+            "id": 2,
+            "name": "Propietario"
         }
         
     ],
-    "properties":[]
-}
+    "Properties":[
+    {
+        "id": 1,
+        "userid": 1
+    }
+    ]
+  }
