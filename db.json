@@ -41,17 +41,27 @@
             "name" : "Venta"
         }
     ],
-    "users" :[],
-    "roles":[
+    "users" :[
         {
-            "id": 1,
-            "name": "Usuario"
-        },
+        "id": 1,
+        "username": "Juan",
+        "email": "juanperez@gmail.com",
+        "phone": "3216549870",
+        "password": "123456",
+        "roles": "1"
+        }
+    ],
+    "owner":[
         {
-            "id": 2,
-            "name": "Propietario"
+        "id": 1,
+        "username": "Juan",
+        "email": "juanperez@gmail.com",
+        "phone": "3216549870",
+        "password": "123456",
+        "roles": "1",
+        "properties":[]
         }
         
     ],
-    "Properties":[]
-  }
+    "properties":[]
+}
