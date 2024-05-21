@@ -1,10 +1,10 @@
-# Dashboard SPA
+# Raices Urbanas
 
 ## Descripción
 
-En este proyecto, se implementa un dashboard de una aplicación web de una sola página (SPA) utilizando Webpack y Babel. El dashboard consta de varias escenas, como la vista principal, la vista de inicio, la vista de informes y la vista de configuración. Cada escena contiene componentes reutilizables, como la barra
+En este proyecto, se implementa una aplicación web de una sola página (SPA) utilizando Webpack y Babel. La pagina consta de varias escenas, como la vista principal, la vista de las porpiedades, la vista de inicio de sesion, las vistas de perfil de cada tipo de usuario(usuario y dueño), la vista de chat, la vista de notificaciones y la vista de agregar propiedades(solo dueño) 
 
-de navegación, el menú lateral y el formulario de inicio de sesión. El proyecto está estructurado de acuerdo con las mejores prácticas de desarrollo web y utiliza tecnologías modernas para optimizar el rendimiento y la eficiencia del código.
+Algunas escenas contienen componentes reutilizables, como la barra de navegación y el footer. El proyecto está estructurado de acuerdo con las mejores prácticas de desarrollo web y utiliza tecnologías modernas para optimizar el rendimiento y la eficiencia del código.
 
 ## Estructura del proyecto
 ```txt
@@ -15,35 +15,31 @@ project-root/
 ├── app/                        # Carpeta de código fuente
 │   ├── assets/                 # Imágenes, fuentes, etc.
 │   ├── components/             # Componentes reutilizables globales
+|   |   ├── header/             # header 
+|   |       ├── header.js
+|   |       └── header.
+|   |   ├── footer/             # footer
+|   |       ├── footer.js
+|   |       └── footer.css
 │   │   ├── navigation-bar/     # Barra de navegación
 │   │   │   ├── navigation-bar.js
 │   │   │   └── navigation-bar.css
-│   │   ├── sidebar-menu/       # Menú lateral
-│   │   │   ├── sidebar-menu.js
-│   │   │   └── sidebar-menu.css
-│   │   └── login-form/         # Formulario de login
-│   │       ├── login-form.js
-│   │       └── login-form.css
-│   ├── scenes/                 # Diferentes escenas para el dashboard
-│   │   ├── dashboard/          # Vista principal del dashboard
-│   │   │   ├── dashboard.html
-│   │   │   ├── dashboard.js
-│   │   │   ├── dashboard.css
-│   │   │   └── components/
-│   │   ├── home/               # Escena de Home dentro del dashboard
-│   │   │   ├── home.html
+├── scenes/                 # Diferentes escenas para el dashboard
+│   │   ├── home/          # Vista principal
 │   │   │   ├── home.js
 │   │   │   ├── home.css
 │   │   │   └── components/
-│   │   ├── reports/            # Escena de Reports dentro del dashboard
-│   │   │   ├── reports.html
-│   │   │   ├── reports.js
-│   │   │   ├── reports.css
+│   │   ├── login/               # Escena de login
+│   │   │   ├── login.js
+│   │   │   ├── login.css
 │   │   │   └── components/
-│   │   └── settings/           # Escena de Settings dentro del dashboard
-│   │       ├── settings.html
-│   │       ├── settings.js
-│   │       ├── settings.css
+│   │   ├── property-view/            # Escena de Property-view
+│   │   │   ├── property-view.js
+│   │   │   ├── property-view.css
+│   │   │   └── components/
+│   │   └── register/           # Escena de Register
+│   │       ├── register.js
+│   │       ├── register.css
 │   │       └── components/
 │   ├── styles/                 # Estilos globales
 │   │   └── global.css          # Estilos globales compartidos
