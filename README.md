@@ -8,39 +8,66 @@ Algunas escenas contienen componentes reutilizables, como la barra de navegació
 
 ## Estructura del proyecto
 ```txt
-project-root/
+Raices-Urbanas/
 │
 ├── dist/                       # Carpeta de salida de archivos generados por Webpack
 │
 ├── app/                        # Carpeta de código fuente
 │   ├── assets/                 # Imágenes, fuentes, etc.
 │   ├── components/             # Componentes reutilizables globales
-|   |   ├── header/             # header 
-|   |       ├── header.js
-|   |       └── header.
 |   |   ├── footer/             # footer
-|   |       ├── footer.js
-|   |       └── footer.css
-│   │   ├── navigation-bar/     # Barra de navegación
-│   │   │   ├── navigation-bar.js
-│   │   │   └── navigation-bar.css
-├── scenes/                 # Diferentes escenas para el dashboard
-│   │   ├── home/          # Vista principal
-│   │   │   ├── home.js
-│   │   │   ├── home.css
-│   │   │   └── components/
-│   │   ├── login/               # Escena de login
-│   │   │   ├── login.js
-│   │   │   ├── login.css
-│   │   │   └── components/
-│   │   ├── property-view/            # Escena de Property-view
-│   │   │   ├── property-view.js
-│   │   │   ├── property-view.css
-│   │   │   └── components/
-│   │   └── register/           # Escena de Register
-│   │       ├── register.js
-│   │       ├── register.css
-│   │       └── components/
+|   |   |   ├── footer.js
+|   |   |   └── footer.css
+│   |   └── navigation-bar/     # Barra de navegación
+│   |       ├── navigation-bar.js
+│   |       └── navigation-bar.css
+|   ├── scenes/                 # Diferentes escenas para el dashboard
+|   |   ├──private/
+|   |   |   ├── add-edit/
+│   │   │   |   ├── add-edit.css
+│   │   │   |   ├── add-edit.js
+│   │   │   |   └── index.js
+|   |   |   ├── appointment/
+│   │   │   |   ├── appointment.css
+│   │   │   |   ├── appointment.js
+│   │   │   |   └── index.js
+|   |   |   ├── messages/
+│   │   │   |   ├── index.js
+│   │   │   |   ├── messages.css
+│   │   │   |   └── messages.js
+|   |   |   ├── notifications/
+│   │   │   |   ├── index.js
+│   │   │   |   ├── add-edit.css
+│   │   │   |   └── add-edit.js
+|   |   |   └── profile/
+│   │   │       ├── index.js
+│   │   │       ├── profile.css
+│   │   │       └── profile.js
+|   |   └──public/
+|   |       ├── available-properties/
+│   │       |   ├── available-properties.css
+│   │       |   ├── available-properties.js
+│   │       |   └── index.js
+│   │       ├── home/               # Vista principal
+│   │       |   ├── home.css
+│   │       |   ├── home.js
+│   │       |   └── index.js
+│   │       ├── login/               # Escena de login
+│   │       |   ├── components/
+|   |       |   |   ├── index.js
+|   |       |   |   ├── login-form.css
+|   |       |   |   └── login-form.js
+│   │       |   ├── login.css
+│   │       |   ├── login.js
+│   │       |   └── index.js
+│   │       ├── property-view/            # Escena de Property-view
+│   │       |   ├── property-view.css
+│   │       |   ├── property-view.js
+│   │       |   └── index.js
+│   │       └── register/           # Escena de Register
+│   │           ├── index.js
+│   │           ├── register.css
+│   │           └── register.js
 │   ├── styles/                 # Estilos globales
 │   │   └── global.css          # Estilos globales compartidos
 │   └── index.js                # Archivo principal de JavaScript
