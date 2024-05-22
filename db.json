@@ -1,57 +1,81 @@
 {
-    "zone":[
+    "zone": [
         {
-            "id" : 1,
-            "name" : "Laureles"
+            "id": 1,
+            "name": "Laureles"
         },
         {
-            "id" : 2,
-            "name" : "Belen"
+            "id": 2,
+            "name": "Belen"
         },
         {
-            "id" : 3,
-            "name" : "Poblado"
+            "id": 3,
+            "name": "Poblado"
         },
         {
-            "id" : 4,
-            "name" : "Envigado"
+            "id": 4,
+            "name": "Envigado"
         },
         {
-            "id" : 5,
-            "name" : "Sabaneta"
+            "id": 5,
+            "name": "Sabaneta"
         }
     ],
-    "property-type":[
+    "property-type": [
         {
-            "id" : 1,
-            "name" : "Apartamento"
+            "id": 1,
+            "name": "Apartamento"
         },
         {
-            "id" : 2,
-            "name" : "Casa"
+            "id": 2,
+            "name": "Casa"
         }
     ],
-    "PropertyObjective":[
+    "PropertyObjective": [
         {
-            "id" : 1,
-            "name" : "Arrendamiento"
+            "id": 1,
+            "name": "Arrendamiento"
         },
         {
-            "id" : 2,
-            "name" : "Venta"
+            "id": 2,
+            "name": "Venta"
         }
     ],
-    "users" :[
+    "users": [
         {
-        "id": 1,
-        "username": "Juan",
-        "email": "juanperez@gmail.com",
-        "phone": "3216549870",
-        "password": "123456",
-        "roles": "1"
+            "id": 1,
+            "username": "Juan",
+            "email": "juanperez@gmail.com",
+            "phone": "3216549870",
+            "password": "123456",
+            "roleId": 1
+        },
+        {
+            "id": 2,
+            "username": "Juan",
+            "email": "juanperez@gmail.com",
+            "phone": "3216549870",
+            "password": "123456",
+            "roleId": 1
+        },
+        {
+            "id": 3,
+            "username": "Juan",
+            "email": "juanperez@gmail.com",
+            "phone": "3216549870",
+            "password": "123456",
+            "roleId": 1
+        },
+        {
+            "id": 4,
+            "username": "Juan",
+            "email": "juanperez@gmail.com",
+            "phone": "3216549870",
+            "password": "123456",
+            "roleId": 1
         }
     ],
-    "roles":[
+    "roles": [
         {
             "id": 1,
             "name": "Usuario"
@@ -60,12 +84,22 @@
             "id": 2,
             "name": "Propietario"
         }
-        
     ],
-    "Properties":[
-    {
-        "id": 1,
-        "userid": 1
-    }
+    "Properties": [
+        {
+            "id": 1,
+            "userId": 1,
+            "address": "carrera 40 #10-15",
+            "neighborhood": "San Bernardo",
+            "ropertyObjective": 1,
+            "propertyType": 1,
+            "zone": 2,
+            "value": 2500000,
+            "rooms": 4,
+            "bathrooms": 2,
+            "sqm": 100,
+            "stratum": 4,
+            "description": "Casa en venta en el barrio de la 40"
+        }
     ]
-  }
+}
