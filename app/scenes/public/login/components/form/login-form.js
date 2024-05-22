@@ -26,9 +26,10 @@ export async function LoginFormComponent() {
             alert("Please fill in all fields");
             return;
         }
-        const token = await login(email, password);
+        const token = await findUser(email, password);
         if (token) {
             localStorage.setItem("token", token);
+            console.log("True");
             navigateTo("/home");
         } else {
             alert("Invalid credentials");
@@ -58,3 +59,16 @@ async function login(email, password) {
         return null;
     }
 }
+
+async function findUser(username, password) {
+    const response = await fetch("http://localhost:3000/users");
+    const users = await response.json();
+
+    for (let i = 0; i < users.length; i++) {
+        if (users[i].username === username && users[i].password === password) {
+            return true;
+        }
+    }
+    return false;
+}
+

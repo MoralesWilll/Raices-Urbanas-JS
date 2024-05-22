@@ -1,4 +1,4 @@
-import styles from "./home.css";
+import styles from "./profile.css";
 
 export function ProfileScene() {
     // generate random number between 1 an 10
