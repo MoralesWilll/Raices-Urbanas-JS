@@ -99,7 +99,8 @@
             "bathrooms": 2,
             "sqm": 100,
             "stratum": 4,
-            "description": "Casa en venta en el barrio de la 40"
+            "description": "Casa en venta en el barrio de la 40",
+            "images": []
         }
     ]
 }
