@@ -20,7 +20,7 @@ export const routes = {
         { path: "/messages", component: messagesScene },
     ],
     public: [
-        { path: "/", component: LoginPage },
+        // { path: "/", component: LoginPage },
         { path: "/home", component: HomeScene },
         { path: "/login", component: LoginPage },
         { path: "/register", component: RegisterPage },

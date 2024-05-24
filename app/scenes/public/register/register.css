@@ -1,1 +1,88 @@
+.login_user {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    background-color: var(--mainColor);
+    color: var(--white);
+}
 
+.form_login {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.text_login {
+    font-size: 3rem;
+    text-align: start;
+}
+
+.text_login p {
+    font-size: 2rem;
+    width: 29rem;
+}
+
+.link_registration a {
+    color: var(--seconColor);
+}
+
+.link_registration {
+    font-size: 1.6rem;
+    text-align: start;
+}
+
+.form_login form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.img_login {
+    height: 100%;
+    width: 50%;
+    background-size: inherit;
+}
+
+.img_login img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.form_notifications_login {
+    width: 29rem;
+    height: 5rem;
+    background-color: #8080808b;
+    border: none;
+    border-left: 5px var(--seconColor) solid;
+    outline: none;
+    caret-color: var(--white);
+    color: var(--white);
+    font-size: 2rem;
+    padding: 5%;
+}
+
+
+.button_form_login {
+    font-size: 2rem;
+    width: 10rem;
+    height: 4rem;
+    border: none;
+    cursor: pointer;
+    background-color: var(--seconColor);
+    color: var(--white);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.link {
+    color: var(--seconColor);
+    cursor: pointer;
+}
