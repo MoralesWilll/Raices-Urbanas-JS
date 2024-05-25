@@ -11,6 +11,7 @@ import { LoginPage } from "../scenes/public/login";
 import { PropertyView } from "../scenes/public/property-view/propertyView";
 import { RegisterPage } from "../scenes/public/register";
 
+
 export const routes = {
     private: [
         { path: "/profile", component: ProfileScene },
@@ -20,7 +21,6 @@ export const routes = {
         { path: "/messages", component: messagesScene },
     ],
     public: [
-        // { path: "/", component: LoginPage },
         { path: "/home", component: HomeScene },
         { path: "/login", component: LoginPage },
         { path: "/register", component: RegisterPage },

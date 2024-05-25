@@ -1,0 +1,60 @@
+/*************************HEADER*************************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+.header{
+    width: 100%;
+    height: 200px;
+    background-image: url(https://cdn.pixabay.com/photo/2013/09/15/06/59/medellin-182316_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#img_home{
+    width: 150px;
+    height: 150px;
+    margin-left: 5%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#img_home img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#welcome{
+    width: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #002147;
+    font-size: 170%;
+}
+#welcome h1{
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+#welcome h2{
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+
+.logout{
+    width: 100px;
+    height: 100%;
+    margin-right: 2%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: end;
+    align-items: start;
+}
+
+.logout img:hover{
+    width: 55px;
+    height: 55px;
+}
