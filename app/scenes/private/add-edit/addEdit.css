@@ -1,0 +1,91 @@
+
+/*************************BODY*************************************/
+
+
+/*************************HEADER*************************************/
+.header{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header img:hover{
+    width: 30px;
+    height: 30px;
+}
+/*************************UPDATEIMG*************************************/
+.updateimg{
+    width: 100%;
+    height: 200px;
+    margin: 0px;
+    background-color: #002147;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.updateimg:hover{
+    background-color: #013b7d;
+}
+.drop_area {
+    border: 2px dashed #ffffff;
+    border-radius: 20px;
+    text-align: center;
+    width: 95%;
+    height: 90%;
+    color: white;
+}
+.drop_area.highlight {
+    border-color: white;
+}
+.fileInput {
+    display: none;
+}
+
+/*************************FORM*************************************/
+
+.section_form{
+    width: 100%;
+    height: auto;
+}
+
+#address{
+    width: 95%;
+}
+
+#name_location{
+    width: 95%;
+}
+
+.closed_questions{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+#price{
+    width: 95%;
+}
+
+.number_questions1{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.number_questions1 input{
+    width: 30%;
+    height: 30px;
+}
+.number_questions1 div{
+    width: 30%;
+    height: 30px;
+}
+
+#description{
+    width: 95%;
+    height: 100px;
+}
