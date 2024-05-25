@@ -5,17 +5,18 @@ import sell from "/app/assets/images/devices_24dp_FILL0_wght400_GRAD0_opsz24.svg
 import lease from "/app/assets/images/real_estate_agent_24dp_FILL0_wght400_GRAD0_opsz24.svg";
 import buy from "/app/assets/images/location_away_24dp_FILL0_wght400_GRAD0_opsz24.svg";
 import lease_apt from "/app/assets/images/location_home_24dp_FILL0_wght400_GRAD0_opsz24.svg";
-import envigado from "/app/assets/images/envigado.jpg"
-import laureles from "/app/assets/images/laureles.jpg"
-import sabaneta from "/app/assets/images/sabaneta.jpg"
-import itagui from "/app/assets/images/itagui.jpg"
+import envigado from "/app/assets/images/envigado.jpg";
+import laureles from "/app/assets/images/laureles.jpg";
+import sabaneta from "/app/assets/images/sabaneta.jpg";
+import itagui from "/app/assets/images/itagui.jpg";
 import brand1 from "/app/assets/images/brand-1.png";
-import brand2 from "/app/assets/images/brand-2.png"
-import brand3 from "/app/assets/images/brand-3.png"
-import brand4 from "/app/assets/images/brand-4.png"
+import brand2 from "/app/assets/images/brand-2.png";
+import brand3 from "/app/assets/images/brand-3.png";
+import brand4 from "/app/assets/images/brand-4.png";
 import location_img from "/app/assets/images/location_on_24dp_FILL0_wght400_GRAD0_opsz24.svg";
 import link_contact from "/app/assets/images/account_circle_24dp_FILL0_wght400_GRAD0_opsz24-Copy.svg";
-import touch from "/app/assets/images/touch_app_24dp_FILL0_wght400_GRAD0_opsz24.svg"
+import touch from "/app/assets/images/touch_app_24dp_FILL0_wght400_GRAD0_opsz24.svg";
+import { navigateTo } from "../../../Router";
 
 export async function HomeScene() {
     const root = document.getElementById("root");
@@ -154,15 +155,9 @@ export async function HomeScene() {
     </footer>
 
 </styles.$body>`;
-}
 
-const a = document.getElementById("go-to-login-from-home");
-if (a) {
-    a.addEventListener("click", () => {
-        if (true) {
-            navigateTo("/login");
-        }
+    const a = document.getElementById("go-to-login-from-home");
+    a.addEventListener("click", function () {
+        navigateTo("/login");
     });
-} 
-
-// src="https://cdn.pixabay.com/photo/2013/09/15/06/59/medellin-182316_1280.jpg"
+}
