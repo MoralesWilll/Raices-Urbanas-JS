@@ -1,9 +1,7 @@
-
 import styless from "./register.css";
 import { navigateTo } from "../../../Router";
 import login_img from "/app/assets/images/img-1.jpg";
 import styles from "./register.css";
-
 
 export async function RegisterPage() {
     const root = document.getElementById("root");
@@ -17,14 +15,14 @@ export async function RegisterPage() {
                 <h2>Regístrate</h2>
                 <p>para iniciar sesión</p>
             </div>
-            <form action="" method="get">
-                <input type="text" class="${styless.form_notifications_login}" name="name-user-login" placeholder="Usuario">
+            <form action="" id="registration-form" method="get">
+                <input type="text" class="${styless.form_notifications_login}" name="username" id="username" placeholder="Usuario">
 
-                <input type="email" name="email-user"  class="${styless.form_notifications_login}" placeholder="Email">
+                <input type="email" name="email" id="email" class="${styless.form_notifications_login}" placeholder="Email">
 
-                <input type="tel" name="phone-user" class="${styless.form_notifications_login}" placeholder="Teléfono">
+                <input type="tel" name="phone" id="phone" class="${styless.form_notifications_login}" placeholder="Teléfono">
 
-                <input type="password" name="password-user-login" id="" class="${styless.form_notifications_login}"
+                <input type="password" name="password" id="password" class="${styless.form_notifications_login}"
                     placeholder="Contraseña">
 
                 <div class="${styless.link_registration}">
@@ -41,36 +39,13 @@ export async function RegisterPage() {
 </body>
     `;
 
-    // const goToLoginSpan = document.getElementById("go-to-login");
-    // goToLoginSpan.addEventListener("click", () => {
-    //     if (true) {
-    //         navigateTo("/login");
-    //     }
-    // });
-
     const b = document.getElementById("go-to-login");
     b.addEventListener("click", () => {
         if (true) {
             navigateTo("/login");
         }
     });
-=======
-        <form id="registration-form">
-  <label for="username">Username:</label><br>
-  <input type="text" id="username" name="username"><br>
 
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email"><br>
-
-  <label for="phone">Phone Number:</label><br>
-  <input type="tel" id="phone" name="phone"><br>
-
-  <label for="password">Password:</label><br>
-  <input type="password" id="password" name="password"><br>
-
-  <input type="submit" value="Submit">
-</form>
-    `;
     const form = document.getElementById("registration-form");
 
     form.addEventListener("submit", async (event) => {
@@ -103,10 +78,9 @@ export async function RegisterPage() {
                 throw new Error(`Error ${response.status}: ${errorMessage}`);
             }
 
-            console.log("User registered successfully");
+            navigateTo("/login");
         } catch (error) {
             console.error("Registration failed:", error);
         }
     }
-
 }
