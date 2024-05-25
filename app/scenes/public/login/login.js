@@ -53,12 +53,14 @@ export async function LoginPage() {
         const token = await findUser(email, password);
         if (token) {
             localStorage.setItem("token", token);
+            localStorage.setItem("id", uId);
             navigateTo("/home");
         } else {
             alert("Invalid credentials");
         }
     });
 }
+var uId = "";
 async function findUser(username, password) {
     const response = await fetch("http://localhost:3000/users");
     const users = await response.json();
@@ -66,6 +68,7 @@ async function findUser(username, password) {
     for (let i = 0; i < users.length; i++) {
         if (users[i].username === username && users[i].password === password) {
             const data = { token: "mi token" };
+            uId = users[i].id;
             return data.token;
         }
     }
