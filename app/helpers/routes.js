@@ -9,6 +9,7 @@ import { HomeScene } from "../scenes/public/home";
 import { LoginPage } from "../scenes/public/login";
 import { RegisterPage } from "../scenes/public/register";
 import { availablePropertiesScene } from "../scenes/public/available-properties/availableProperties";
+import { seller_profile } from "../scenes/private/profile/seller_profile/seller_profile";
 
 export const routes = {
     private: [
@@ -17,7 +18,7 @@ export const routes = {
         { path: "/notificaions", component: notificationScene },
     ],
     public: [
-        { path: "/", component: LoginPage },
+        { path: "/", component: seller_profile},
         { path: "/home", component: HomeScene },
         { path: "/login", component: LoginPage },
         { path: "/register", component: RegisterPage },
