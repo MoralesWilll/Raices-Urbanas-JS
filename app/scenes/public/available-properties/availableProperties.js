@@ -6,6 +6,7 @@ import iconPinLotacion from '../../../assets/images/pin.png';
 import iconArea from '../../../assets/images/area.png';
 import iconBed from '../../../assets/images/bed.png';
 import iconBath from '../../../assets/images/toilet.png';
+import { navigateTo } from "../../../Router";
 
 export async function availablePropertiesScene() {
     const root = document.getElementById('root');
@@ -54,25 +55,48 @@ export async function availablePropertiesScene() {
                         </div>
 
                         <div class="${styles.small_1}">
+
                             <label for="type-select" class="${styles.category}">Tipo</label>
-                            <select name="typeOfAptoHouse" id="type-select" class="${styles.smallForm}"></select>
+
+                            <select name="typeOfAptoHouse" id="type-select" class="${styles.smallForm}">
+                            
+                                <option value="Apartamento">Apartamento</option>
+
+                                <option value="Casa">Casa</option>
+
+                            </select>
                         </div>
 
                         <div class="${styles.small_2}">
+
                             <label for="bathroom-input" class="${styles.category}">Baños</label>
+
                             <input type="number" min="1" name="bathroom" id="bathroom-input" class="${styles.smallForm}">
+
                         </div>
 
                         <div class="${styles.medium_2}">
+                        
                             <label for="rooms-input" class="${styles.category}">Habitaciones</label>
+
                             <input type="number" min="1" name="rooms" id="rooms-input" class="${styles.mediumForm} ${styles.mediumFormFix}">
+
                         </div>
 
                     </div>
                     
                     <div>
+
                         <label for="for-select" class="${styles.category}">Para</label>
-                        <select name="for" id="for-select" class="${styles.bigForm}"></select>
+
+                        <select name="for" id="for-select" class="${styles.bigForm}">
+                        
+                            <option value="Arrendamiento">Arrendamiento</option>
+
+                            <option value="Venta">Venta</option>
+
+                        </select>
+
                     </div>
 
                     <div>
@@ -781,8 +805,12 @@ export async function availablePropertiesScene() {
 
     </section> 
     `;
-    
-    //Aqui se pone la logica de esta pagina, botones que redirigen u cualquier otra cosa
+    const buttons = document.getElementsByClassName("availableProperties__resultButton___SuBqR");
 
+    for (const button of buttons) {
+        button.addEventListener("click", function () {
+            navigateTo("/propertyView");
+        });
+    }
 
 }
