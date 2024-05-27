@@ -50,15 +50,21 @@ export async function availablePropertiesScene() {
                             <label for="rooms-input" class="${styles.category}">Habitaciones</label>
                             <input type="number" min="1" name="rooms" id="rooms-input" class="${styles.mediumForm} ${styles.mediumFormFix}">
                         </div>
+
                     </div>
                     
                     <div>
                         <label for="for-select" class="${styles.category}">Para</label>
                         <select name="for" id="for-select" class="${styles.bigForm}"></select>
                     </div>
+
                     <div>
                         <label for="price-input" class="${styles.category} ${styles.categoryMains}">Precio</label>
-                        <input type="range" name="price" id="price-input" class="${styles.bigForm}">
+                        <div class="${styles.conteiner__price}">
+                        <input type="range" name="price" id="price-input" class="${styles.price_input}" min="350000" max="8000000" step="10000" value="2300000">
+                        <P>$300.000 </P>
+                        <P>$8´000.000</P>
+                        </div>
                     </div>
 
                 </form>
