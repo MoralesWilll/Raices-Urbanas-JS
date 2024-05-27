@@ -75,6 +75,9 @@ export async function availablePropertiesScene() {
                         </div>
                     </div>
 
+                    <div>
+                        <button type="submit"></button>
+                    </div>
                 </form>
 
             </div>
