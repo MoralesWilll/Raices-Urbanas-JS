@@ -1,7 +1,7 @@
 import styles from './header_profile.css';
-import photo from './../../../assets/images/photo.jpeg';
-import logout_img from './../../../assets/images/img_user_profile/logout.svg';
-import {navigateTo} from '../../../Router';
+import photo from './../../assets/images/photo.jpeg';
+import logout_img from './../../assets/images/logout.svg';
+import {navigateTo} from '../../Router';
 
 export function header_profile() {
     const html = `
@@ -18,10 +18,11 @@ export function header_profile() {
     const logic = () => {
         const button = document.getElementById('btn_logout')
         button.addEventListener('click', ()=> {
+            localStorage.clear();
             navigateTo('/home');
         });
 
-
+        
         fetch(`http://localhost:3000/users/${localStorage.getItem("id")}`, {
         
         })
@@ -32,7 +33,7 @@ export function header_profile() {
             return response.json(); 
         })
         .then(data => {
-            console.log(data);
+            
             document.getElementById('name_id').textContent = data.username
             
             
