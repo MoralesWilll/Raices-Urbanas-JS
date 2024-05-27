@@ -104,14 +104,11 @@ export async function availablePropertiesScene() {
                         <p id="rangeValue">2300000</p>
                         <div class="${styles.conteiner__price}">
                         <input type="range" name="price" id="priceInput" class="${styles.price_input}" min="350000" max="8000000" step="10000" value="2300000">
-                        <P>$300.000 </P>
+                        <P>$300.000</P>
                         <P>$8´000.000</P>
                         </div>
                     </div>
 
-                    <div>
-                        <button type="submit"></button>
-                    </div>
                 </form>
 
             </div>
