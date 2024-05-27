@@ -11,6 +11,13 @@ export async function availablePropertiesScene() {
     const root = document.getElementById('root');
     
     root.innerHTML = `
+    <script defer>
+        function updateRangeValue() {
+            const rangeInput = document.getElementById('priceInput');
+            const rangeValue = document.getElementById('rangeValue');
+            rangeValue.textContent = rangeInput.value;
+        }
+    </script>
     <!--Hero-->
     <section>
 
@@ -60,8 +67,9 @@ export async function availablePropertiesScene() {
 
                     <div>
                         <label for="price-input" class="${styles.category} ${styles.categoryMains}">Precio</label>
+                        <p id="rangeValue">2300000</p>
                         <div class="${styles.conteiner__price}">
-                        <input type="range" name="price" id="price-input" class="${styles.price_input}" min="350000" max="8000000" step="10000" value="2300000">
+                        <input type="range" name="price" id="priceInput" class="${styles.price_input}" min="350000" max="8000000" step="10000" value="2300000">
                         <P>$300.000 </P>
                         <P>$8´000.000</P>
                         </div>
