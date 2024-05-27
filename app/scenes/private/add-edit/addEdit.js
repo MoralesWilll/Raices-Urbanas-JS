@@ -119,7 +119,6 @@ export function addEditScene() {
         document.getElementById('fileInput').addEventListener('change', async (e) => {
             const files = e.target.files[0];
 
-            console.log('File', files);
         // Aqui se crea el codigo para subir las imagenes a cloudinary
             const formData = new FormData();
             formData.append('file', files);
@@ -130,9 +129,7 @@ export function addEditScene() {
                     'Content-Type': 'multipart/form-data'
                 },
             });
-            console.log(res);
             image_up = res.data.secure_url;
-            console.log(image_up); 
         });
 
 
