@@ -8,10 +8,10 @@ import EmblaCarousel from 'embla-carousel'
 import { addPrevNextBtnsClickHandlers } from './carousel/EmblaArrowButtons.js'
 
 export function ProfileScene(profile){
-    if (localStorage.getItem('perfil') == 1){
+    if (localStorage.getItem('profile') == 1){
         profile = seller_profile();
     }
-    else if (localStorage.getItem('perfil') == 2){
+    else if (localStorage.getItem('profile') == 2){
         profile = buyer_profile();
     }
     else{
