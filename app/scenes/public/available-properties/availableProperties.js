@@ -33,14 +33,24 @@ export async function availablePropertiesScene() {
 
                     <div>
                         <label for="city-select" class="${styles.category} ${styles.categoryMains}">Ciudad</label>
-                        <select name="city" id="city-select" class="${styles.bigForm}"></select>
+                        <select name="city" id="city-select" class="${styles.bigForm}">
+                            <option value="Medellín">Medellín</option>
+                        </select>
                     </div>
 
                     <div class="${styles.formatOfForm}">
 
                         <div class="${styles.medium_1}">
                             <label for="neighborhood-select" class="${styles.category}">Barrio</label>
-                            <select name="neighborhood" id="neighborhood-select" class="${styles.mediumForm}"></select>
+                            <select name="neighborhood" id="neighborhood-select" class="${styles.mediumForm}">
+                            
+                                <option value="Laureles">Laureles</option>
+
+                                <option value="Belen">Belén</option>
+
+                                <option value="Poblado">poblado</option>
+
+                            </select>
                         </div>
 
                         <div class="${styles.small_1}">

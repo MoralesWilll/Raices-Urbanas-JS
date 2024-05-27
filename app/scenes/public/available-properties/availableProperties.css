@@ -22,7 +22,7 @@ h4,
 h5 {
     padding: 0;
     margin: 0;
-
+    border: 0;
 }
 
 p {
@@ -36,8 +36,9 @@ span {
 }
 
 input, select{
-    border: unset;
+    border: 0;
     height: 25px;
+    padding: 0;
 }
 
 /*Hero-styles*/
@@ -122,7 +123,6 @@ input, select{
 
 .hero__conteinerFilter .bigForm {
     width: 100%;
-    padding: 2% 0;
 }
 
 .hero__conteinerFilter .mediumForm {
@@ -317,5 +317,20 @@ input, select{
 
 .result6 {
     grid-row: 2/3;
+    grid-column: 3/4;
+}
+
+.result7 {
+    grid-row: 3/4;
+    grid-column: 1/2;
+}
+
+.result8 {
+    grid-row: 3/4;
+    grid-column: 2/3;
+}
+
+.result9 {
+    grid-row: 3/4;
     grid-column: 3/4;
 }
