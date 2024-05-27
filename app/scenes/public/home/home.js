@@ -84,7 +84,7 @@ export async function HomeScene() {
                 <button class="${styles.locations}">
                     <div class="${styles.name_locations}">
                         <h3>Envigado</h3>
-                        <img src="${touch}" alt="">
+                        <img id="go-to-properties" src="${touch}" alt="">
                     </div>
                 </button>
                 <button class="${styles.locations}">
@@ -159,5 +159,10 @@ export async function HomeScene() {
     const a = document.getElementById("go-to-login-from-home");
     a.addEventListener("click", function () {
         navigateTo("/login");
+    });
+
+    const b = document.getElementById("go-to-properties");
+    b.addEventListener("click", function () {
+        navigateTo("/availableProperties");
     });
 }
