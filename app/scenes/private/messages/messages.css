@@ -1,0 +1,158 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Globals*/
+
+
+:root {
+    /* /Color/ */
+    --main-color: #002147;
+    --secundary-color: #ff5101;
+    --tertiary-color: #808080;
+    --utility-color: #fdf6ea;
+
+    /* /Fonts/ */
+    --font-family: 'Roboto', sans-serif;
+    --font-family-2: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: "Montserrat";
+    font-size: 100%;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    background-color: #808080;
+}
+
+.chatContainer {
+    width: 37%;
+    height: 90vh;
+    background-color: #002147;
+    padding: 10px;
+    font-family: Montserrat, sans-serif;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .headerBar {
+    background-color: #ff5101;
+    padding: 10px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .profilePicture {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+  .imgChat{
+    width: 57%;
+    display: flex;
+    justify-content: end;
+  }
+  
+  .closeButton {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #ff5101;
+    border: none;
+  }
+  
+  .userMessages {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column-reverse;
+    font-family: var(--font-family-2);
+  }
+  
+  .userMessage {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    align-self: flex-start;
+    font-size: 24px;
+    height: 100px;
+  }
+  
+  .userMessage .username {
+    font-size: 18px;
+    color: black;
+    margin-top: 5px;
+    padding: 0 0 20px 0;
+    font-family: var(--font-family-2);
+  }
+  
+  .agentMessages {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column-reverse;
+    align-self: flex-end;
+    align-items: end;
+    font-size: 24px;
+  }
+  .textChat{
+    text-align: right;
+    direction: rtl;
+    font-family: var(--font-family-2);
+  }
+  
+  .agentMessage {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    align-self: flex-start;
+    font-size: 24px;
+    height: 100px;
+
+  }
+  
+  
+  .agentMessage .username {
+    font-size: 18px;
+    color: black;
+    margin-top: 5px;
+    font-family: var(--font-family-2);
+  }
+  .nameText{
+    display: flex;
+    justify-content: end;
+    font-size: 18px;
+    color: black;
+    padding: 0 0 20px 0;
+    font-family: var(--font-family-2);
+  }
+  
+  .messageForm {
+    display: flex;
+    align-self: flex-end;
+    width: 100%;
+    height: 45px;
+  }
+  
+  .messageInput {
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 10px;
+  }
+  
+  .messageForm button {
+    background-color: #ff5101;
+    color: #FFFFFF;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  .chatCenter{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #808080;
+  }
