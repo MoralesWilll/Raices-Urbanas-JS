@@ -130,6 +130,14 @@ export async function PropertyView() {
     const buttonChat = document.getElementById("chat");
     buttonChat.addEventListener("click", () => {
         if (true) {
+            if(localStorage.getItem('appoiments-scheduled')){
+                let cont = parseInt(localStorage.getItem('appoiments-scheduled'));
+                cont = cont + 1;
+                localStorage.setItem('appoiments-scheduled',cont);
+            }
+            else if(!localStorage.getItem('appoiments-scheduled')){
+                localStorage.setItem('appoiments-scheduled', 1);
+            }
             navigateTo("/messages");
         }
     });
@@ -137,6 +145,14 @@ export async function PropertyView() {
     const button = document.getElementById("cita");
     button.addEventListener("click", () => {
         if (true) {
+            if(localStorage.getItem('times-contacted')){
+                let cont = parseInt(localStorage.getItem('times-contacted'));
+                cont += 1;
+                localStorage.setItem('times-contacted',cont);
+            }
+            else if(!localStorage.getItem('times-contacted')){
+                localStorage.setItem('times-contacted', 1);
+            }
             navigateTo("/appointment");
         }
     });
