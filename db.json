@@ -1,147 +1,173 @@
 {
-    "zone": [
-        {
-            "id": "1",
-            "name": "Laureles"
-        },
-        {
-            "id": "2",
-            "name": "Belen"
-        },
-        {
-            "id": "3",
-            "name": "Poblado"
-        },
-        {
-            "id": "4",
-            "name": "Envigado"
-        },
-        {
-            "id": "5",
-            "name": "Sabaneta"
-        }
-    ],
-    "property-type": [
-        {
-            "id": "1",
-            "name": "Apartamento"
-        },
-        {
-            "id": "2",
-            "name": "Casa"
-        }
-    ],
-    "PropertyObjective": [
-        {
-            "id": "1",
-            "name": "Arrendamiento"
-        },
-        {
-            "id": "2",
-            "name": "Venta"
-        }
-    ],
-    "users": [
-        {
-            "id": "1",
-            "username": "Juan",
-            "email": "juanperez@gmail.com",
-            "phone": "3216549870",
-            "password": "123456",
-            "roleId": 1
-        },
-        {
-            "id": "2",
-            "username": "Juan",
-            "email": "juanperez@gmail.com",
-            "phone": "3216549870",
-            "password": "123456",
-            "roleId": 1
-        },
-        {
-            "id": "3",
-            "username": "Juan",
-            "email": "juanperez@gmail.com",
-            "phone": "3216549870",
-            "password": "123456",
-            "roleId": 1
-        },
-        {
-            "id": "4",
-            "username": "Juan",
-            "email": "juanperez@gmail.com",
-            "phone": "3216549870",
-            "password": "123456",
-            "roleId": 1
-        },
-        {
-            "id": "b84a",
-            "username": "Camilo",
-            "email": "camilo32165@gmail.com",
-            "phone": "3154564545",
-            "password": "654321",
-            "roleId": 1
-        },
-        {
-            "id": "a46e",
-            "username": "Mariam",
-            "email": "mperez@gmail.com",
-            "phone": "3001589632",
-            "password": "123654",
-            "roleId": 1
-        },
-        {
-            "id": "dc87",
-            "username": "camilo",
-            "email": "camilo@gmail.com",
-            "phone": "rr",
-            "password": "resto",
-            "roleId": 1
-        },
-        {
-            "id": "1a85",
-            "username": "Juan3",
-            "email": "juanperez@gmail.com",
-            "phone": "3154564545",
-            "password": "123456",
-            "roleId": 2
-        }
-    ],
-    "roles": [
-        {
-            "id": "1",
-            "name": "Propietario"
-        },
-        {
-            "id": "2",
-            "name": "Usuario"
-        }
-    ],
-    "Properties": [
-        {
-            "id": "1",
-            "userId": 1,
-            "address": "carrera 40 #10-15",
-            "neighborhood": "San Bernardo",
-            "ropertyObjective": 1,
-            "propertyType": 1,
-            "zone": 2,
-            "value": 2500000,
-            "rooms": 4,
-            "bathrooms": 2,
-            "sqm": 100,
-            "stratum": 4,
-            "description": "Casa en venta en el barrio de la 40",
-            "images": []
-        }
-        
-    ],
-    "messages": [
-        {
-            "ownerId": 1,
-            "userId": 2,
-            "message": "Hola, estoy interesado en la propiedad",
-            "date": ""
-        }
-    ]
+  "zone": [
+    {
+      "id": "1",
+      "name": "Laureles"
+    },
+    {
+      "id": "2",
+      "name": "Belen"
+    },
+    {
+      "id": "3",
+      "name": "Poblado"
+    },
+    {
+      "id": "4",
+      "name": "Envigado"
+    },
+    {
+      "id": "5",
+      "name": "Sabaneta"
+    }
+  ],
+  "property-type": [
+    {
+      "id": "1",
+      "name": "Apartamento"
+    },
+    {
+      "id": "2",
+      "name": "Casa"
+    }
+  ],
+  "PropertyObjective": [
+    {
+      "id": "1",
+      "name": "Arrendamiento"
+    },
+    {
+      "id": "2",
+      "name": "Venta"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "Juan",
+      "email": "juanperez@gmail.com",
+      "phone": "3216549870",
+      "password": "123456",
+      "roleId": 1
+    },
+    {
+      "id": "2",
+      "username": "Juan",
+      "email": "juanperez@gmail.com",
+      "phone": "3216549870",
+      "password": "123456",
+      "roleId": 1
+    },
+    {
+      "id": "3",
+      "username": "Juan",
+      "email": "juanperez@gmail.com",
+      "phone": "3216549870",
+      "password": "123456",
+      "roleId": 1
+    },
+    {
+      "id": "4",
+      "username": "Juan",
+      "email": "juanperez@gmail.com",
+      "phone": "3216549870",
+      "password": "123456",
+      "roleId": 1
+    },
+    {
+      "id": "b84a",
+      "username": "Camilo",
+      "email": "camilo32165@gmail.com",
+      "phone": "3154564545",
+      "password": "654321",
+      "roleId": 1
+    },
+    {
+      "id": "a46e",
+      "username": "Mariam",
+      "email": "mperez@gmail.com",
+      "phone": "3001589632",
+      "password": "123654",
+      "roleId": 1
+    },
+    {
+      "id": "dc87",
+      "username": "camilo",
+      "email": "camilo@gmail.com",
+      "phone": "rr",
+      "password": "resto",
+      "roleId": 1
+    },
+    {
+      "id": "1a85",
+      "username": "Juan3",
+      "email": "juanperez@gmail.com",
+      "phone": "3154564545",
+      "password": "123456",
+      "roleId": 2
+    },
+    {
+      "id": "9f2f",
+      "username": "juanse",
+      "email": "jagredo03@gmail.com",
+      "phone": "3176980852",
+      "password": "123",
+      "roleId": "1"
+    }
+  ],
+  "roles": [
+    {
+      "id": "1",
+      "name": "Propietario"
+    },
+    {
+      "id": "2",
+      "name": "Usuario"
+    }
+  ],
+  "properties": [
+    {
+      "id": "1",
+      "userId": 1,
+      "address": "carrera 40 #10-15",
+      "neighborhood": "San Bernardo",
+      "ropertyObjective": 1,
+      "propertyType": 1,
+      "zone": 2,
+      "value": 2500000,
+      "rooms": 4,
+      "bathrooms": 2,
+      "sqm": 100,
+      "stratum": 4,
+      "description": "Casa en venta en el barrio de la 40",
+      "images": []
+    },
+    {
+      "id": "eb77",
+      "userid": "9f2f",
+      "address": "fased",
+      "name_location": "asdf",
+      "PropertyObjective": "1",
+      "property_type": "1",
+      "zone": "1",
+      "price": "12",
+      "numberRooms": "12",
+      "numberBathrooms": "12",
+      "propertySize": "12",
+      "stratum": "1",
+      "description": "acs",
+      "images": [
+        "https://res.cloudinary.com/dnwpj75xg/image/upload/v1716934381/proyecto/e1eswtjakumlklc6bwmi.jpg"
+      ]
+    }
+  ],
+  "messages": [
+    {
+      "ownerId": 1,
+      "userId": 2,
+      "message": "Hola, estoy interesado en la propiedad",
+      "date": "",
+      "id": "24a1"
+    }
+  ]
 }
