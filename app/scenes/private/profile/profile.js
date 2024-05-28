@@ -85,7 +85,7 @@ export function seller_profile() {
     `;
     const button_backhome = document.getElementById('back_home')
     button_backhome.addEventListener('click', ()=> {
-        navigateTo('/register');
+        navigateTo('/home');
     });
     const modal = document.querySelector('#addEdit')
     const button_addhome = document.getElementById('add_home')
@@ -215,7 +215,7 @@ export function buyer_profile(){
     `;
     const button_backhome = document.getElementById('back_home')
     button_backhome.addEventListener('click', ()=> {
-        navigateTo('/register');
+        navigateTo('/home');
     });
 
     fetch(`http://localhost:3000/users/${localStorage.getItem("id")}`, {
