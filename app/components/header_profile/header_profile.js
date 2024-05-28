@@ -18,7 +18,9 @@ export function header_profile() {
     const logic = () => {
         const button = document.getElementById('btn_logout')
         button.addEventListener('click', ()=> {
-            localStorage.clear();
+            localStorage.removeItem('profile');
+            localStorage.removeItem('token');
+            localStorage.removeItem('id');
             navigateTo('/home');
         });
 
