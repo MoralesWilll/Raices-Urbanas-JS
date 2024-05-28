@@ -31,7 +31,7 @@
 }
 
 .link_registration {
-    font-size: 1.6rem;
+    font-size: 2rem;
     text-align: start;
 }
 
@@ -63,7 +63,7 @@
     caret-color: var(--white);
     color: var(--white);
     font-size: 2rem;
-    padding: 5%;
+    padding: 4%;
 }
 
 

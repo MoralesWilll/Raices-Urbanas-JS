@@ -25,6 +25,12 @@ export async function RegisterPage() {
                 <input type="password" name="password" id="password" class="${styless.form_notifications_login}"
                     placeholder="Contraseña">
 
+                <select name="priority" class="${styless.form_notifications_login}">
+                    <option value="" disabled selected>¿Eres arrendatario(a)?</option>
+                    <option value="seller">Si</option>
+                    <option value="user">No</option>
+                </select>
+
                 <div class="${styless.link_registration}">
                     <p>¿Ya tienes cuenta? <span class="${styless.link}" id="go-to-login">Inicia sesión</span></p>
                 </div>
