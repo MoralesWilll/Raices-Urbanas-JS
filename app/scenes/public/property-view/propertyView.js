@@ -35,7 +35,7 @@ export async function PropertyView() {
             <div class="${styles.houseCaracteristicsPropiety}">
                 <div class="${styles.houseCaracteristics2}">
                     <div class="${styles.betImg}">
-                        <img src="${property_AA_3401_6}" class="${styles.iconDescription}" />
+                        <img src="${property_AA_3401_9}" class="${styles.iconDescription}" />
                         <div>
                             <p class="${styles.houseDescriptionMeters}">100</p>
                             <p class="${styles.houseDescriptionMeters}">metros</p>
@@ -51,14 +51,14 @@ export async function PropertyView() {
                 </div>
                 <div class="${styles.houseCaracteristics2}">
                     <div class="${styles.betImg}">
-                        <img src="${property_AA_3401_8}" class="${styles.iconDescription}" />
+                        <img src="${property_AA_3401_6}" class="${styles.iconDescription}" />
                         <div>
                             <p class="${styles.houseDescriptionBathroom}">2</p>
                             <p class="${styles.houseDescriptionBathroom}">baños</p>
                         </div>
                     </div>
                     <div class="${styles.betImg}">
-                        <img src="${property_AA_3401_9}" class="${styles.iconDescription}" />
+                        <img src="${property_AA_3401_8}" class="${styles.iconDescription}" />
                         <div>
                             <p class="${styles.houseDescriptionParking}">1</p>
                             <p class="${styles.houseDescriptionParking}">estacionamiento</p>
