@@ -25,10 +25,10 @@ export async function RegisterPage() {
                 <input type="password" name="password" id="password" class="${styless.form_notifications_login}"
                     placeholder="Contraseña">
 
-                <select name="priority" class="${styless.form_notifications_login}">
-                    <option value="" disabled selected>¿Eres arrendatario(a)?</option>
-                    <option value="seller">Si</option>
-                    <option value="user">No</option>
+                <select id="id" name="value_profile" class="${styless.form_notifications_login}">
+                    <option value="" disabled selected>¿Que tipo de usuario eres?</option>
+                    <option value="1">Propietario</option>
+                    <option value="2">Comprador</option>
                 </select>
 
                 <div class="${styless.link_registration}">
@@ -61,22 +61,29 @@ export async function RegisterPage() {
         const email = document.getElementById("email").value;
         const phone = document.getElementById("phone").value;
         const password = document.getElementById("password").value;
+        const roleId = document.getElementById("id").value;
 
         try {
-            await registerUser(username, email, phone, password);
+            await registerUser(username, email, phone, password, roleId);
         } catch (error) {
             console.error("Registration failed:", error);
         }
     });
 
-    async function registerUser(username, email, phone, password) {
+    async function registerUser(username, email, phone, password, roleId) {
         try {
             const response = await fetch("http://localhost:3000/users", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({ username, email, phone, password }),
+                body: JSON.stringify({
+                    username,
+                    email,
+                    phone,
+                    password,
+                    roleId,
+                }),
             });
 
             if (!response.ok) {
