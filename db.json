@@ -134,5 +134,14 @@
             "description": "Casa en venta en el barrio de la 40",
             "images": []
         }
+        
+    ],
+    "messages": [
+        {
+            "ownerId": 1,
+            "userId": 2,
+            "message": "Hola, estoy interesado en la propiedad",
+            "date": ""
+        }
     ]
 }
