@@ -1,8 +1,9 @@
-import styles from './messages.css';
+import styles from "./messages.css";
 import property_AA_3401_10 from "../../../assets/images/imgFace.jpg";
+import { navigateTo } from "../../../Router";
 
 export async function messagesScene() {
-  const root = document.getElementById('root');
+  const root = document.getElementById("root");
 
   root.innerHTML = `
     <div class="${styles.chatCenter}">  
@@ -12,7 +13,7 @@ export async function messagesScene() {
                     <img src="${property_AA_3401_10}" class="${styles.profilePicture}">
                 </div>
                 <div class="${styles.buttonClose}">
-                    <button class="${styles.closeButton}">X</button>
+                    <button id="close-button" class="${styles.closeButton}">X</button>
                 </div>
             </div>
             <div class="${styles.agentMessages}">
@@ -47,5 +48,8 @@ export async function messagesScene() {
     </div>
     `;
 
-  //Aqui se pone la logica de esta pagina, botones que redirigen u cualquier otra cosa
+  const a = document.getElementById("close-button");
+  a.addEventListener("click", function () {
+    navigateTo("/propertyView");
+  });
 }
