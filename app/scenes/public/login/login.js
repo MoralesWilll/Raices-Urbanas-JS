@@ -54,6 +54,7 @@ export async function LoginPage() {
         if (token) {
             localStorage.setItem("token", token);
             localStorage.setItem("id", uId);
+            localStorage.setItem("profile", profile);
             navigateTo("/home");
         } else {
             alert("Invalid credentials");
@@ -61,6 +62,7 @@ export async function LoginPage() {
     });
 }
 var uId = "";
+var profile = 0;
 async function findUser(username, password) {
     const response = await fetch("http://localhost:3000/users");
     const users = await response.json();
@@ -69,6 +71,7 @@ async function findUser(username, password) {
         if (users[i].username === username && users[i].password === password) {
             const data = { token: "mi token" };
             uId = users[i].id;
+            profile = users[i].roleId;
             return data.token;
         }
     }
