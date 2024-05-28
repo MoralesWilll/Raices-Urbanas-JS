@@ -148,7 +148,7 @@ export function addEditScene() {
                     body: JSON.stringify(finalData)
                     });
                     console.log(resp);
-                    navigateTo('/')   
+                    navigateTo('/profile')   
                 }
                 else{
                     alert("Por lo menos agrega una imagen");
@@ -158,7 +158,7 @@ export function addEditScene() {
         
         const button_backhome = document.getElementById('close')
         button_backhome.addEventListener('click', ()=> {
-            navigateTo('/');
+            navigateTo('/profile');
         });
     }    
     
