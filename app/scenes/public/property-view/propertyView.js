@@ -95,6 +95,7 @@ export async function PropertyView() {
     <section>
         <div class="${styles.desciption}">
             <h2 class="${styles.titleDescription}">Descripcion</h2>
+            <br>
             <p class="${styles.textDescription}">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum iure in debitis
                 quod mollitia. Architecto error
                 odio, ullam maxime iste amet earum pariatur et fugiat aliquid vel, repellendus vitae ut?Lorem ipsum
@@ -108,6 +109,8 @@ export async function PropertyView() {
     <section>
         <div class="${styles.seccionCharacteristics}">
             <h2 class="${styles.titleDescription}">Caracteristicas</h2>
+            <br>
+            <br>
             <div class="${styles.seccionDescription}">
                 <div class="${styles.desciptionPropiety}">
                     <p class="${styles.seccionDescriptionTitle}">propiedades exclusivas</p>
@@ -119,6 +122,8 @@ export async function PropertyView() {
                     <p class="${styles.seccionDescriptionTitle}">propiedades exclusivas</p>
                 </div>
             </div>
+            <br>
+            <br>
             <div class="${styles.seccionDescription}">
                 <div class="${styles.desciptionPropiety}">
                     <p class="${styles.seccionDescriptionTitle}">propiedades exclusivas</p>
