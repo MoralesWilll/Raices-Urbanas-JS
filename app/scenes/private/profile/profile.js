@@ -75,9 +75,15 @@ export function seller_profile() {
     </section>
 
     <section class="${styles.dashboard}">
+        <h1 class="${styles.h1}"">Estadisticas:</h1>
         <div id="${styles.fondo_dashboard}">
-            <h1 class="${styles.h1}"">Estadisticas:</h1>
             <div class="${styles.container1}">
+                <div class="${styles.cont11}"><div>Total de visitas:<p>${(parseInt(localStorage.getItem('appoiments-scheduled')))+(parseInt(localStorage.getItem('times-contacted')))}</div></p></div>
+                <div class="${styles.cont12}">
+                    <div class="${styles.chart2}" id="chart2"></div>
+                </div>
+             </div>
+            <div class="${styles.container2}">
                 <div class="${styles.chart1}" id="chart1"></div>
             </div>
         </div>
@@ -195,12 +201,12 @@ export function seller_profile() {
                  type: 'pie',
                  radius: '50%',
                  data: [
-                   { value: localStorage.getItem('appoiments-scheduled'), name: `Interesados en contacto: ${localStorage.getItem('appoiments-scheduled')}`},
-                   { value: localStorage.getItem('times-contacted'), name: `Interesados en agendar cita: ${localStorage.getItem('times-contacted')}`}
+                   { value: localStorage.getItem('appoiments-scheduled'), name: `Contacto: ${localStorage.getItem('appoiments-scheduled')}`},
+                   { value: localStorage.getItem('times-contacted'), name: `Cita: ${localStorage.getItem('times-contacted')}`}
                  ],
                  label: {
                      // Configuración del estilo de la etiqueta
-                     fontSize: 25, // Tamaño de la letra en píxeles
+                     fontSize: 15, // Tamaño de la letra en píxeles
                      fontWeight: 'bold', // Peso de la letra (opcional)
                      fontStyle: 'italic', // Estilo de la letra (opcional)
                      color: 'white' // Color de la letra (opcional)
@@ -224,17 +230,56 @@ export function seller_profile() {
              ]
            };
      }
- 
+    const getOptionchart2 = () => {
+       return {
+            xAxis: {
+              data: ['Citas','Contactos', 'Visitas']
+            },
+            yAxis: {},
+            dataGroupId: '',
+            animationDurationUpdate: 500,
+            series: {
+              type: 'bar',
+              id: 'sales',
+              data: [
+                {
+                  value: localStorage.getItem('appoiments-scheduled'),
+                  groupId: 'Citas'
+                },
+                {
+                  value: localStorage.getItem('times-contacted'),
+                  groupId: 'Contactos'
+                },
+                {
+                    value: parseInt(localStorage.getItem('times-contacted')) + parseInt(localStorage.getItem('appoiments-scheduled')),
+                    groupId: 'Contactos'
+                }
+              ],
+              universalTransition: {
+                enabled: true,
+                divideShape: 'clone'
+              },
+              itemStyle: {
+                // Puedes establecer el color de las barras aquí
+                color: function(params) {
+                  // Puedes proporcionar un arreglo de colores para cada barra
+                  var colorList = ['#ff5101', '#ff5101', '#ff5101'];
+                  return colorList[params.dataIndex];
+                }
+              }
+            }
+          };
+
+    } 
      const initchart = ()=>{
          const chart1 = echarts.init(document.getElementById('chart1'));
+         const chart2 = echarts.init(document.getElementById('chart2'));
  
          chart1.setOption(getOptionchart1());
+         chart2.setOption(getOptionchart2());
      };
  
-     window.addEventListener("load",() => {
-         initchart();
-     })
-    
+     initchart();
             
 }
 
