@@ -366,8 +366,8 @@ export function seller_profile() {
                  type: 'pie',
                  radius: '50%',
                  data: [
-                   { value: localStorage.getItem('appoiments-scheduled'), name: `Contacto: ${localStorage.getItem('appoiments-scheduled')}`},
-                   { value: localStorage.getItem('times-contacted'), name: `Cita: ${localStorage.getItem('times-contacted')}`}
+                   { value: localStorage.getItem('times-contacted'), name: `Contacto: ${localStorage.getItem('times-contacted')}`},
+                   { value: localStorage.getItem('appoiments-scheduled'), name: `Cita: ${localStorage.getItem('appoiments-scheduled')}`}
                  ],
                  label: {
                      // Configuración del estilo de la etiqueta
