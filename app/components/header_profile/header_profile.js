@@ -1,5 +1,5 @@
 import styles from './header_profile.css';
-import photo from './../../assets/images/photo.jpeg';
+import photo from './../../assets/images/Diseño_sin_título-removebg-preview.png';
 import logout_img from './../../assets/images/logout.svg';
 import {navigateTo} from '../../Router';
 
