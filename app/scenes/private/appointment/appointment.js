@@ -1,7 +1,10 @@
 import styles from "./appointment.css";
+import close from "/app/assets/images/cancel_24dp_FILL0_wght400_GRAD0_opsz24.svg";
+import { navigateTo } from "../../../Router";
+
 
 export async function appointmentScene() {
-  const root = document.getElementById("root");
+const root = document.getElementById("root");
 
   root.innerHTML = `
 
@@ -34,10 +37,14 @@ export async function appointmentScene() {
                 </div>
             </div>
             <div class="${styles.right}">
+                <div class="${styles.buttonClose}">
+                    <button id="close-button" class="${styles.closeButton}"><img src="${close}" alt=""></button>
+                </div>
                 <div class="${styles.todayDate}">
                     <div class="${styles.eventDay}">mie</div>
                     <div class="${styles.eventDate}">12th diciembre 2022</div>
                 </div>
+                
                 <div class="${styles.events}"></div>
                 <div class="${styles.addEventWrapper}">
                     <div class="${styles.addEventHeader}">
@@ -59,6 +66,7 @@ export async function appointmentScene() {
                         <button class="${styles.addEventBtn}">Añadir Evento</button>
                     </div>
                 </div>
+                
             </div>
             <button class="${styles.addEvent}">
                 <i class="${styles.fas} ${styles.faPlus}"></i>
@@ -67,6 +75,9 @@ export async function appointmentScene() {
     </div>
     
     `;
+
+  
+
 
   const calendar = document.querySelector(`.${styles.calendar}`),
     date = document.querySelector(".date"),
@@ -558,4 +569,13 @@ export async function appointmentScene() {
     time = timeHour + ":" + timeMin + " " + timeFormat;
     return time;
   }
+
+  const a = document.getElementById("close-button");
+  a.addEventListener("click", function () {
+      navigateTo("/propertyView");
+  });
+
+
 }
+
+

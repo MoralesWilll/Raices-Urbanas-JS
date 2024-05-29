@@ -55,12 +55,13 @@ body {
     justify-content: end;
   }
   
-  .closeButton {
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #ff5101;
-    border: none;
-  }
+.closeButton {
+  cursor: pointer;
+  background-color: #ff5101;
+  border: none;
+  height: 2rem;
+  width: 2rem;
+}
   
   .userMessages {
     flex-grow: 1;

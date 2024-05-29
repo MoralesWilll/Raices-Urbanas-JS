@@ -6,7 +6,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "monserrate", sans-serif;
-  
+  /* border: 1px red solid; */
 }
 /* nice scroll bar */
 ::-webkit-scrollbar {
@@ -90,6 +90,22 @@
 .calendar .month .prev,
 .calendar .month .next {
   cursor: pointer;
+}
+
+.buttonClose {
+  display: flex;
+  justify-content: end;
+  padding-right: 3%;
+}
+
+.closeButton {
+    cursor: pointer;
+    border: none;
+    height: 2rem;
+    width: 2rem;
+    background: none;
+    display: flex;
+    align-items: end;
 }
 .calendar .month .prev:hover,
 .calendar .month .next:hover {

@@ -1,11 +1,12 @@
 import styles from "./messages.css";
 import property_AA_3401_10 from "../../../assets/images/imgFace.jpg";
 import { navigateTo } from "../../../Router";
+import close from "/app/assets/images/cancel_24dp_FILL0_wght400_GRAD0_opsz24.svg"
 
 export async function messagesScene() {
-  const root = document.getElementById("root");
+const root = document.getElementById("root");
 
-  root.innerHTML = `
+root.innerHTML = `
     <div class="${styles.chatCenter}">  
         <div class="${styles.chatContainer}">
             <div class="${styles.headerBar}">
@@ -13,7 +14,7 @@ export async function messagesScene() {
                     <img src="${property_AA_3401_10}" class="${styles.profilePicture}">
                 </div>
                 <div class="${styles.buttonClose}">
-                    <button id="close-button" class="${styles.closeButton}">X</button>
+                    <button id="close-button" class="${styles.closeButton}"><img src="${close}" alt=""></button>
                 </div>
             </div>
             <div class="${styles.agentMessages}">
