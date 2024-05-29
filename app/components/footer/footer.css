@@ -1,0 +1,49 @@
+.footer {
+    height: 25vh;
+    background-color: var(--mainColor);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--white);
+}
+
+.logo_footer img {
+    height: 17rem;
+}
+
+.address {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+}
+
+.title_footer {
+    font-size: 1.8rem;
+    padding-bottom: 1rem;
+}
+
+.locations_and_links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.logo_links {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.logo_links img {
+    height: 4.5rem;
+}
+
+.copy {
+    height: 5vh;
+    background-color: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    font-size: 1.5rem;
+}
