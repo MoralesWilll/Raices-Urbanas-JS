@@ -91,6 +91,8 @@ export function seller_profile() {
     <dialog id="addEdit">
         ${addEditHtml}
     </dialog>
+    <dialog id="modal_edit" class="${styles.modal_edit}">
+    </dialog>
     `;
 
     const button_backhome = document.getElementById('back_home')
@@ -127,16 +129,182 @@ export function seller_profile() {
                 <div id="${styles.property}" class="embla__slide">
                     <div id="${styles.img_property}"><img src="${property.images}" alt=""></div>
                     <div id="${styles.description_property}"><p>${property.address}</p><p>${property.price}$</p></div>
-                    <div id="${styles.button_edit}" class="delete_butt"><button data-property-id="${property.id}">Borrar</button></div>
+                    <div id="${styles.button_edit}" ><button data-property-id="${property.id}" class="delete_butt">Borrar</button><button data-property-id="${property.id}" class="edit_butt">Editar</button></div>
                 </div>
                 `;
             property_add.appendChild(prop);
             
         });
+        // EDIT PROPERTY
+        const editButtons = document.querySelectorAll('.edit_butt');
+
+        editButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const propertyId = button.getAttribute('data-property-id');
+        
+                fetch(`http://localhost:3000/properties/${propertyId}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Failed to fetch property information');
+                        }
+                        return response.json();
+                    })
+                    .then(propertyInfo => {
+                        // Aquí puedes hacer lo que quieras con la información de la propiedad,
+                        // como mostrarla en una ventana modal o en un elemento en la página.
+                        const modalContainer = document.getElementById('modal_edit');
+                       modalContainer.innerHTML = `
+                       <div class="modal">
+                            <div class="modal-content">
+                                <button class="close" id="${styles.closeedit}">&times;</button>
+                                <p><strong>Información de la propiedad:</strong></p>
+                                <br><br>
+                                <form action="/send" name="form" class="${styles.form}" method="post" target="_blank" accept-charset="UTF-8" id="editPropertyForm">
+                                    <fieldset>
+                                        <legend>Datos generales: </legend>
+                                        <br>
+                                        <!--ask for address-->
+                                        <label for="type">Dirección: </label><br>
+                                        <input type="text" name="address" id="${styles.address}" placeholder="Dirección:" value="${propertyInfo.address}" required><br>
+                                        <br>
+
+                                        <!--Ask name location-->
+                                        <label for="type">Nombre de la localidad: </label><br>
+                                        <input type="text" name="name_location" id="${styles.name_location}" placeholder="Nombre de la unidad o barrio" value="${propertyInfo.name_location}" required><br>
+                                        <br>
+                                        <div class="${styles.closed_questions}">
+                                                <!--PropertyObjective-->
+                                            <label for="objetive">Objetivo: </label><br>
+                                            <select name="PropertyObjective" id="${styles.PropertyObjective}" value="${propertyInfo.PropertyObjective}"required>
+                                                <option value="1">Arrendamiento</option>
+                                                <option value="2">Venta</option>
+                                            </select><br><br>
+
+                                            <!--property_type-->
+                                            <label for="type">Tipo: </label><br>
+                                            <select name="property_type" id="${styles.property_type}" value="${propertyInfo.property_type}" required>
+                                                <option value="1">Apartamento</option>
+                                                <option value="2">Casa</option>
+                                            </select><br><br>
+
+                                            <!--zone-->
+                                            <label for="type">Zona: </label><br>
+                                            <select name="zone" id="${styles.zone}" value="${propertyInfo.zone}" required>
+                                                <option value="1">Laureles</option>
+                                                <option value="2">Belen</option>
+                                                <option value="3">Poblado</option>
+                                                <option value="4">Envigado</option>
+                                                <option value="5">Sabaneta</option>
+                                            </select><br><br>
+                                        </div>
+
+                                        <!--price-->
+                                        <label for="type">Precio: </label>
+                                        <input type="number" id="${styles.price}" name="price" min="0" placeholder="Precio:"  value="${propertyInfo.price}" required><br>
+                                        <br>
+                                    </fieldset>
+                                    <fieldset>
+                                        <legend>Datos especificos: </legend>
+                                        <br>
+                                        <div class="${styles.number_questions1}">
+                                            <!--NumberRooms-->
+                                            <label for="type">Numero de cuartos: </label><br>
+                                            <input type="number" id="${styles.numberRooms}" name="numberRooms" min="1" placeholder="Numero de alcobas:" value="${propertyInfo.numberRooms}" required><br>
+                                            <br>
+
+                                            <!--NumberBathrooms-->
+                                            <label for="type">Numero de baños: </label><br>
+                                            <input type="number" id="${styles.numberBathrooms}" name="numberBathrooms" min="1" placeholder="Numero de baños:" value="${propertyInfo.numberBathrooms}" required><br>
+                                            <br>
+                                        </div>
+                                    
+                                        <div class="${styles.number_questions1}">
+                                            <!--PropertySize-->
+                                            <label for="type">Tamaño de la propiedad: </label><br>
+                                            <input type="number" id="${styles.propertySize}" name="propertySize" min="1" placeholder="Tamaño de la propiedad:" value="${propertyInfo.propertySize}" required><br>
+                                            <br>
+
+                                            <div>
+                                                <!--stratum-->
+                                                <label for="type">Estrato: </label><br>
+                                                <select name="stratum" id="${styles.stratum}" value="${propertyInfo.stratum}" required>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                </select><br><br>   
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                    </fieldset>
+                                    <fieldset>
+                                        <legend>Descripción:</legend>
+                                        <!--Description-->
+                                        <input type="text" name="description" id="${styles.description}" placeholder="Dirección:" value="${propertyInfo.description}" required><br>
+                                        <br>
+                                        <!--enviar-->
+                                        <input type="submit" value="Guardar cambios">
+                                    </fieldset>
+                                        
+
+                                </form>
+                            </div>
+                        </div>
+                        `;
+                        modalContainer.showModal();
+
+                        const closeButton = modalContainer.querySelector('.close');
+                            closeButton.addEventListener('click', () => {
+                                modalContainer.style.display = 'none';
+                            });
+                            
+                            const editPropertyForm = document.getElementById('editPropertyForm');
+                            editPropertyForm.addEventListener('submit', async (event) => {
+                                event.preventDefault();
+                        
+                                // Obtener los datos del formulario
+                                const formData = new FormData(editPropertyForm);
+                                const updatedPropertyData = {};
+                                for (const [key, value] of formData.entries()) {
+                                    updatedPropertyData[key] = value;
+                                }
+
+                                const finalPropertyData = { ...propertyInfo, ...updatedPropertyData };
+                        
+                                // Realizar la solicitud PUT para actualizar la propiedad con los nuevos datos
+                                try {
+                                    const response = await fetch(`http://localhost:3000/properties/${propertyInfo.id}`, {
+                                        method: 'PUT',
+                                        headers: {
+                                            'Content-Type': 'application/json'
+                                        },
+                                        body: JSON.stringify(finalPropertyData)
+                                    });
+                                    if (!response.ok) {
+                                        throw new Error('Failed to update property');
+                                    }
+                                    navigateTo('/profile');
+                                    
+                                } catch (error) {
+                                    console.error('Error updating property:', error);
+                                }
+                            });
+
+
+                        console.log('Property information retrieved successfully:', propertyInfo);
+                    })
+                    .catch(error => {
+                        console.error('Error fetching property information:', error);
+                    });
+            });
+        });
 
 
         // DELETE PROPERTY
-        const deleteButtons = document.querySelectorAll(`.delete_butt button`);
+        const deleteButtons = document.querySelectorAll(`.delete_butt`);
         
         deleteButtons.forEach(button => {
             button.addEventListener('click', () => {

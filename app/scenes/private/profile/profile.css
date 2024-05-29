@@ -315,3 +315,69 @@ color: white;
     border-radius: 40px;
 
 }
+
+
+/**********MODAL EDIT*********/
+
+.modal_edit{
+    width: 35%;
+    height: 500px;
+}
+
+.form{
+    width: 95%;
+}
+
+.form label{
+    font-size: 12px;
+}
+#address{
+    width: 95%;
+    border: 1px solid black;
+}
+
+#name_location{
+    width: 95%;
+    border: 1px solid black;
+}
+
+.closed_questions{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+#price{
+    width: 95%;
+    border: 1px solid black;
+}
+
+.number_questions1{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.number_questions1 input{
+    width: 30%;
+    height: 30px;
+    border: 1px solid black;
+}
+.number_questions1 div{
+    width: 30%;
+    height: 30px;
+    display: flex;
+    border: 1px solid black;
+}
+
+#description{
+    width: 95%;
+    height: 100px;
+    border: 1px solid black;
+}
+
+#closeedit{
+    font-size: 25px;
+
+}
