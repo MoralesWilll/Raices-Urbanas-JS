@@ -231,10 +231,7 @@ export function seller_profile() {
          chart1.setOption(getOptionchart1());
      };
  
-     window.addEventListener("load",() => {
-         initchart();
-     })
-    
+     initchart();
             
 }
 
