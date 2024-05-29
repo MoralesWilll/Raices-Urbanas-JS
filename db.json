@@ -113,6 +113,22 @@
       "phone": "3176980852",
       "password": "123",
       "roleId": "1"
+    },
+    {
+      "id": "0f70",
+      "username": "_mlsdd",
+      "email": "mperezserna8@gmail.com",
+      "phone": "3008387411",
+      "password": "123456",
+      "roleId": "1"
+    },
+    {
+      "id": "2af4",
+      "username": "at821429",
+      "email": "mperezserna8@gmail.com",
+      "phone": "3008387411",
+      "password": "123456",
+      "roleId": "2"
     }
   ],
   "roles": [
@@ -126,22 +142,6 @@
     }
   ],
   "properties": [
-    {
-      "id": "1",
-      "userId": 1,
-      "address": "carrera 40 #10-15",
-      "neighborhood": "San Bernardo",
-      "ropertyObjective": 1,
-      "propertyType": 1,
-      "zone": 2,
-      "value": 2500000,
-      "rooms": 4,
-      "bathrooms": 2,
-      "sqm": 100,
-      "stratum": 4,
-      "description": "Casa en venta en el barrio de la 40",
-      "images": []
-    },
     {
       "id": "eb77",
       "userid": "9f2f",
