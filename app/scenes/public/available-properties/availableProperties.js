@@ -7,11 +7,19 @@ import iconArea from '../../../assets/images/area.png';
 import iconBed from '../../../assets/images/bed.png';
 import iconBath from '../../../assets/images/toilet.png';
 import { navigateTo } from "../../../Router";
+import { navbar } from "../../../components/navbar/navbar";
+import { footer } from "../../../components/footer/footer";
+
 
 export async function availablePropertiesScene() {
     const root = document.getElementById('root');
-    
+    const { html: footerHtml } = footer();
+    const { html: navbarHtml } = navbar();
+
+
     root.innerHTML = `
+        ${navbarHtml}
+
     <script defer>
         function updateRangeValue() {
             const rangeInput = document.getElementById('priceInput');
@@ -800,8 +808,15 @@ export async function availablePropertiesScene() {
 
         </div>
 
-    </section> 
+        </section> 
+        ${footerHtml}
     `;
+
+    const a = document.getElementById("go-to-login-from-home");
+    a.addEventListener("click", function () {
+        navigateTo("/login");
+    });
+
     const buttons = document.getElementsByClassName("availableProperties__resultButton___SuBqR");
 
     for (const button of buttons) {

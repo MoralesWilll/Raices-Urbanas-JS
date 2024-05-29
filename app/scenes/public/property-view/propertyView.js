@@ -9,10 +9,17 @@ import property_AA_3401_7 from "../../../assets/images/cama.png"; // 7 from
 import property_AA_3401_8 from "../../../assets/images/estacionamiento.png"; // 8 from
 import property_AA_3401_9 from "../../../assets/images/la-medida.png"; // 9 from 
 import { navigateTo } from "../../../Router";
+import { navbar } from "../../../components/navbar/navbar";
+import { footer } from "../../../components/footer/footer";
+
 export async function PropertyView() {
     const root = document.getElementById("root");
+    const { html: footerHtml } = footer();
+    const { html: navbarHtml } = navbar();
+
 
     root.innerHTML = `
+    ${navbarHtml}
     <section>
         <div class="${styles.images}">
             <img src="${property_AA_3401_1}" class="${styles.main}" />
@@ -125,7 +132,14 @@ export async function PropertyView() {
             </div>
         </div>
     </section>
+        ${footerHtml}
+
     `;
+
+    const a = document.getElementById("go-to-login-from-home");
+    a.addEventListener("click", function () {
+        navigateTo("/login");
+    });
 
     const buttonChat = document.getElementById("chat");
     buttonChat.addEventListener("click", () => {
