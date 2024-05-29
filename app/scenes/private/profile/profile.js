@@ -27,7 +27,7 @@ export function seller_profile() {
     root.innerHTML = `
     ${headerProfileHtml}
     <nav class="${styles.nav}">
-        <button class="${styles.button_nav}"><strong>Notificaciones</strong></button>
+        <button class="${styles.button_nav}" id="notification"><strong>Notificaciones</strong></button>
     
         <button class="${styles.button_nav}" id="add_home"><strong>Agregar vivienda</strong></button>
     
@@ -94,6 +94,11 @@ export function seller_profile() {
     <dialog id="modal_edit" class="${styles.modal_edit}">
     </dialog>
     `;
+
+    const button_notification = document.getElementById('notification')
+    button_notification.addEventListener('click', ()=> {
+        navigateTo('/notificaions');
+    });
 
     const button_backhome = document.getElementById('back_home')
     button_backhome.addEventListener('click', ()=> {
@@ -370,11 +375,11 @@ export function seller_profile() {
                    { value: localStorage.getItem('appoiments-scheduled'), name: `Cita: ${localStorage.getItem('appoiments-scheduled')}`}
                  ],
                  label: {
-                     // Configuración del estilo de la etiqueta
-                     fontSize: 15, // Tamaño de la letra en píxeles
-                     fontWeight: 'bold', // Peso de la letra (opcional)
-                     fontStyle: 'italic', // Estilo de la letra (opcional)
-                     color: 'white' // Color de la letra (opcional)
+                     
+                     fontSize: 15, 
+                     fontWeight: 'bold', 
+                     fontStyle: 'italic', 
+                     color: 'white' 
                    },
                  emphasis: {
                    itemStyle: {
@@ -384,9 +389,9 @@ export function seller_profile() {
                    }
                  },
                  itemStyle: {
-                     // Puedes establecer el color de los fragmentos internos aquí
+                    
                      color: function(params) {
-                       // Puedes proporcionar un arreglo de colores para cada fragmento
+                       
                        var colorList = ['#ff5101', '#808080'];
                        return colorList[params.dataIndex];
                      }
@@ -425,9 +430,9 @@ export function seller_profile() {
                 divideShape: 'clone'
               },
               itemStyle: {
-                // Puedes establecer el color de las barras aquí
+                
                 color: function(params) {
-                  // Puedes proporcionar un arreglo de colores para cada barra
+                  
                   var colorList = ['#ff5101', '#ff5101', '#ff5101'];
                   return colorList[params.dataIndex];
                 }
@@ -455,7 +460,7 @@ export function buyer_profile(){
     root.innerHTML = `
     ${headerProfileHtml}
     <nav class="${styles.nav}">
-        <button class="${styles.button_nav}"><strong>Notificaciones</strong></button>
+        <button class="${styles.button_nav}" id="notification"><strong>Notificaciones</strong></button>
     
         <button class="${styles.button_nav}" id="back_home"><strong>Volver</strong></button>
     </nav>
@@ -478,6 +483,12 @@ export function buyer_profile(){
         </div>
     </section>
     `;
+
+    const button_notification = document.getElementById('notification')
+    button_notification.addEventListener('click', ()=> {
+        navigateTo('/notificaions');
+    });
+
     const button_backhome = document.getElementById('back_home')
     button_backhome.addEventListener('click', ()=> {
         navigateTo('/home');
