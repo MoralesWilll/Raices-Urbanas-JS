@@ -150,8 +150,6 @@ export function seller_profile() {
                         return response.json();
                     })
                     .then(propertyInfo => {
-                        // Aquí puedes hacer lo que quieras con la información de la propiedad,
-                        // como mostrarla en una ventana modal o en un elemento en la página.
                         const modalContainer = document.getElementById('modal_edit');
                        modalContainer.innerHTML = `
                        <div class="modal">
@@ -274,7 +272,6 @@ export function seller_profile() {
 
                                 const finalPropertyData = { ...propertyInfo, ...updatedPropertyData };
                         
-                                // Realizar la solicitud PUT para actualizar la propiedad con los nuevos datos
                                 try {
                                     const response = await fetch(`http://localhost:3000/properties/${propertyInfo.id}`, {
                                         method: 'PUT',
