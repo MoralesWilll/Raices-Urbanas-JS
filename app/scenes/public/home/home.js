@@ -13,43 +13,25 @@ import brand1 from "/app/assets/images/brand-1.png";
 import brand2 from "/app/assets/images/brand-2.png";
 import brand3 from "/app/assets/images/brand-3.png";
 import brand4 from "/app/assets/images/brand-4.png";
-import location_img from "/app/assets/images/location_on_24dp_FILL0_wght400_GRAD0_opsz24.svg";
-import link_contact from "/app/assets/images/account_circle_24dp_FILL0_wght400_GRAD0_opsz24-Copy.svg";
 import touch from "/app/assets/images/touch_app_24dp_FILL0_wght400_GRAD0_opsz24.svg";
 import { navigateTo } from "../../../Router";
+import { footer } from "../../../components/footer/footer";
+import { navbar } from "../../../components/navbar/navbar";
 
 export async function HomeScene() {
     const root = document.getElementById("root");
+    const { html: footerHtml } = footer();
+    const { html: navbarHtml } = navbar();
+
 
     root.innerHTML = `
-<body>
+    <body>
     <header class="${styles.header_container}"> 
-        <section class="${styles.nav_container}">
-            <div class="${styles.logo}">
-                <img src="${logo}" alt="">
-            </div>
-            <div class="${styles.items_nav}">
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Arrendar</a></li>
-                    <li><a href="#">Sevicios</a></li>
-                    <li><a href="#">Nosotros</a></li>
-                </ul>
-            </div>
-            <div class="${styles.container_reference}">
-                <div class="${styles.button_contact}">
-                    <button type="submit">Contactanos</button>
-                </div>
-                <div class="${styles.img_user}">
-                    <img id="go-to-login-from-home" src="${logo_usser}" alt="">
-                </div>
-            </div>
-        </section>
+        ${navbarHtml}
         <section class="${styles.container_slider_box}">
         
         </section>
     </header>
-
     <main class="${styles.main_container}">
         <section class="${styles.section_services}">
             <div class="${styles.title_items}">
@@ -116,44 +98,8 @@ export async function HomeScene() {
                 <img src="${brand4}" alt="">
             </div>
         </section>
+        ${footerHtml}
     </main>
-
-    <footer>
-        <section class="${styles.footer}">
-            <div class="${styles.logo_footer}">
-                <img src="${logo}" alt="">
-            </div>
-            <div class="${styles.locations_and_links}">
-                <h2 class="${styles.title_footer}">Visítanos</h2>
-                <div class="${styles.address}">
-                    <img src="${location_img}" alt="">
-                    <p>Calle 47 #33b - 34, El poblado Medellín</p>
-                </div>
-                <div class="${styles.address}">
-                    <img src="${location_img}" alt="">
-                    <p>Calle 47 #33b - 34, El poblado Medellín</p>
-                </div>
-                <div class="${styles.address}">
-                    <img src="${location_img}" alt="">
-                    <p>Calle 47 #33b - 34, El poblado Medellín</p>
-                </div>
-                
-            </div>
-            <div class="${styles.notifications_footer}">
-                <h2 class="${styles.title_footer}">Redes sociales</h2>
-                <div class="${styles.logo_links}">
-                    <a href="#"><img src="${link_contact}" alt=""></a>
-                    <a href="#"><img src="${link_contact}" alt=""></a>
-                    <a href="#"><img src="${link_contact}" alt=""></a>
-                    <a href="#"><img src="${link_contact}" alt=""></a>
-                </div>
-            </div>
-        </section>
-        <section class="${styles.copy}">
-            <p>Copyright © 2024</p>
-        </section>
-    </footer>
-
 </styles.$body>`;
 
     const a = document.getElementById("go-to-login-from-home");
