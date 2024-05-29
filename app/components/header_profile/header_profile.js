@@ -1,12 +1,11 @@
 import styles from './header_profile.css';
-import photo from './../../assets/images/Diseño_sin_título-removebg-preview.png';
 import logout_img from './../../assets/images/logout.svg';
 import {navigateTo} from '../../Router';
 
 export function header_profile() {
     const html = `
     <header class="${styles.header}">
-        <div id="${styles.img_home}"><img src="${photo}"  alt=""></div>
+        <div id="${styles.img_home}"></div>
         <div id="${styles.welcome}">
             <h1>BIENVENIDO(A)</h1>
             <h2 id="name_id"></h2>
