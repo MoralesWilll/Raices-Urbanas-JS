@@ -1,6 +1,4 @@
 import styles from "./home.css";
-import logo from "/app/assets/images/Diseño_sin_título-removebg-preview.png";
-import logo_usser from "/app/assets/images/account_circle_24dp_FILL0_wght400_GRAD0_opsz24.svg";
 import sell from "/app/assets/images/devices_24dp_FILL0_wght400_GRAD0_opsz24.svg";
 import lease from "/app/assets/images/real_estate_agent_24dp_FILL0_wght400_GRAD0_opsz24.svg";
 import buy from "/app/assets/images/location_away_24dp_FILL0_wght400_GRAD0_opsz24.svg";
@@ -26,7 +24,7 @@ export async function HomeScene() {
 
     root.innerHTML = `
     <body>
-    <header class="${styles.header_container}"> 
+    <header id="home" class="${styles.header_container}"> 
         ${navbarHtml}
         <section class="${styles.container_slider_box}">
         

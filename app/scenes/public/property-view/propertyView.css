@@ -12,6 +12,7 @@ html {
 *::before,
 *::after {
     box-sizing: inherit;
+    /* border: 1px red solid; */
 }
 
 :root {
@@ -86,7 +87,8 @@ img {
         "main img3 img4 ";
     grid-template-columns: 2fr 1fr 1fr;
     gap: 15px;
-    padding: 20px 20px 0 30px;
+    padding: 10rem 2rem 0 2rem;
+    padding-bottom: 15rem;
 }
 
 .main {
@@ -138,13 +140,15 @@ img {
     flex-direction: row;
     justify-content: space-between;
     height: 40vh;
-    margin: 80px;
+    padding-top: 15rem;
+    padding: 15rem 3rem 0 3rem;
 }
 
 .propertyDescription {
     display: flex;
     flex-direction: column;
     width: 50%;
+    
 }
 
 .houseCharacteristics {
@@ -214,6 +218,7 @@ img {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    gap: 2rem;
 }
 
 .button {
@@ -267,7 +272,7 @@ img {
 
 .desciption {
     height: 30vh;
-    margin: 80px;
+    padding: 15rem 3rem 0 3rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -291,11 +296,13 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 15rem 3rem 15rem 3rem;
 }
 .seccionDescription{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: start;
+    gap: 2rem;
 }
 .seccionDescriptionTitle{
     font-size: 30px;

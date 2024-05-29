@@ -14,10 +14,10 @@ export function navbar() {
             </div>
             <div class="${styles.items_nav}">
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Arrendar</a></li>
-                    <li><a href="#">Sevicios</a></li>
-                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Arrendar</a></li>
+                    <li><a href="">Sevicios</a></li>
+                    <li><a href="">Nosotros</a></li>
                 </ul>
             </div>
             <div class="${styles.container_reference}">
