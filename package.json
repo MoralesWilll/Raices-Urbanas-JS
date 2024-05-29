@@ -13,6 +13,8 @@
     "three.js": "^0.77.0"
   },
   "devDependencies": {
+    "bootstrap": "^5.3.3",
+    "echarts": "^5.5.0",
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "axios": "^1.7.2",

@@ -2,7 +2,8 @@ import styles from './profile.css';
 import { header_profile } from '../../../components/header_profile/index.js'
 import { addEditScene } from '../add-edit/index.js';
 import { navigateTo } from '../../../Router.js';
-import img_dashboard from './../../../assets/images/dashboard.png'
+import * as echarts from 'echarts';
+import 'bootstrap'
 
 import EmblaCarousel from 'embla-carousel'
 import { addPrevNextBtnsClickHandlers } from './carousel/EmblaArrowButtons.js'
@@ -75,14 +76,17 @@ export function seller_profile() {
 
     <section class="${styles.dashboard}">
         <div id="${styles.fondo_dashboard}">
-            <h1>Estadisticas de la propiedad</h1>
-            <img src="${img_dashboard}" alt="">
+            <h1 class="${styles.h1}"">Estadisticas:</h1>
+            <div class="${styles.container1}">
+                <div class="${styles.chart1}" id="chart1"></div>
+            </div>
         </div>
     </section>
     <dialog id="addEdit">
         ${addEditHtml}
     </dialog>
     `;
+
     const button_backhome = document.getElementById('back_home')
     button_backhome.addEventListener('click', ()=> {
         navigateTo('/home');
@@ -177,9 +181,60 @@ export function seller_profile() {
     )
 
     emblaApi.on('destroy', removePrevNextBtnsClickHandlers)
+
+    //////////dashboard/////////////
+
+    const getOptionchart1 = () => {
+        return {
+             tooltip: {
+               trigger: 'item'
+             },
+             series: [
+               {
+                 name: 'Estadisticas de propiedad',
+                 type: 'pie',
+                 radius: '50%',
+                 data: [
+                   { value: localStorage.getItem('appoiments-scheduled'), name: `Interesados en contacto: ${localStorage.getItem('appoiments-scheduled')}`},
+                   { value: localStorage.getItem('times-contacted'), name: `Interesados en agendar cita: ${localStorage.getItem('times-contacted')}`}
+                 ],
+                 label: {
+                     // Configuración del estilo de la etiqueta
+                     fontSize: 25, // Tamaño de la letra en píxeles
+                     fontWeight: 'bold', // Peso de la letra (opcional)
+                     fontStyle: 'italic', // Estilo de la letra (opcional)
+                     color: 'white' // Color de la letra (opcional)
+                   },
+                 emphasis: {
+                   itemStyle: {
+                     shadowBlur: 10,
+                     shadowOffsetX: 0,
+                     shadowColor: 'rgb(255, 255, 255)'
+                   }
+                 },
+                 itemStyle: {
+                     // Puedes establecer el color de los fragmentos internos aquí
+                     color: function(params) {
+                       // Puedes proporcionar un arreglo de colores para cada fragmento
+                       var colorList = ['#ff5101', '#808080'];
+                       return colorList[params.dataIndex];
+                     }
+                   }
+               }
+             ]
+           };
+     }
+ 
+     const initchart = ()=>{
+         const chart1 = echarts.init(document.getElementById('chart1'));
+ 
+         chart1.setOption(getOptionchart1());
+     };
+ 
+     window.addEventListener("load",() => {
+         initchart();
+     })
     
-
-
             
 }
 
