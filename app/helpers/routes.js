@@ -16,7 +16,7 @@ export const routes = {
     private: [
         { path: "/profile", component: ProfileScene },
         { path: "/add-edit", component: addEditScene },
-        { path: "/notificaions", component: notificationScene },
+        { path: "/notifications", component: notificationScene },
         { path: "/appointment", component: appointmentScene },
         { path: "/messages", component: messagesScene },
     ],

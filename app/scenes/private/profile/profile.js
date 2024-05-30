@@ -115,7 +115,7 @@ export function seller_profile() {
 
     const button_notification = document.getElementById('go_notification');
     button_notification.addEventListener("click", () =>{
-        navigateTo("/notfications");
+        navigateTo("/notifications");
     })
 
     const button_backhome = document.getElementById("back_home");
