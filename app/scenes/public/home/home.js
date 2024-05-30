@@ -90,7 +90,7 @@ export async function HomeScene() {
             </div>
         </section>
 
-        <section class="${styles.section_sponsoring_brands}">
+        <section class="${styles.section_sponsoring_brands}" id="sponsoring_brands">
             <div class="${styles.sponsoring_brands}">
                 <img src="${brand1}" alt="">
                 <img src="${brand2}" alt="">

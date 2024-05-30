@@ -10,7 +10,7 @@ import { navigateTo } from "../../Router";
 export function footer() {
 
     const html = `
-        <footer>
+        <footer id="footer">
         <section class="${styles.footer}">
             <div class="${styles.logo_footer}">
                 <img src="${logo}" alt="">
