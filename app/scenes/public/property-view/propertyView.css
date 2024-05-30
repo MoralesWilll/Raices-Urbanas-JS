@@ -290,6 +290,11 @@ img {
     font-size: 60px;
     font-weight: 700;
     color: #002147;
+    padding-top: 10%;
+}
+
+.description_section{
+    padding-bottom: 10%;
 }
 
 .seccionCharacteristics {

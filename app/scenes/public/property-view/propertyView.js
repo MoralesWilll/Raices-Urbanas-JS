@@ -108,7 +108,7 @@ export async function PropertyView() {
                 amet consectetur adipisicing elit. Consectetur, quia. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe assumenda rerum rem tempora</p>
         </div>
     </section>
-    <section>
+    <section class="${styles.description_section}">
         <div class="${styles.seccionCharacteristics}">
             <h2 class="${styles.titleDescription}">Caracteristicas</h2>
             <br>
