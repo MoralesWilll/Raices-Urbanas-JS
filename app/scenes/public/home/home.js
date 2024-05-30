@@ -33,12 +33,12 @@ export async function HomeScene() {
         </section>
     </header>
     <main class="${styles.main_container}">
-        <section class="${styles.section_services}">
+        <section class="${styles.section_services}" id="sponsoring_brands">
             <div class="${styles.title_items}">
                 <h2>¿Que quieres hacer hoy?</h2>
                 <p>Explora nuestros servicios</p>
             </div>
-            <div class="${styles.references_services}">
+            <div class="${styles.references_services}" >
                 <div class="${styles.anchore_services}">
                     <a href="#"><img src="${sell}" alt=""></a>
                     <p class="${styles.text_services}">Vender <br> mi imnueble</p>
@@ -90,7 +90,7 @@ export async function HomeScene() {
             </div>
         </section>
 
-        <section class="${styles.section_sponsoring_brands}" id="sponsoring_brands">
+        <section class="${styles.section_sponsoring_brands}" >
             <div class="${styles.sponsoring_brands}">
                 <img src="${brand1}" alt="">
                 <img src="${brand2}" alt="">

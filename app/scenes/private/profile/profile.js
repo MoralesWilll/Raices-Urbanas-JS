@@ -42,7 +42,7 @@ export function seller_profile() {
 
 
     <section class="${styles.carousel} embla">
-        <div id="${styles.add_property}"><h2>Viviendas agregadas:</h2></div>
+        <div id="${styles.add_property}"><h2 class="${styles.title_add}">Viviendas agregadas</h2></div>
 
         <div class="${styles.carousel_properties} embla__viewport">
             <div class="${
@@ -90,7 +90,7 @@ export function seller_profile() {
     </section>
 
     <section class="${styles.dashboard}">
-        <h1 class="${styles.h1}"">Estadisticas:</h1>
+        <h1 class="${styles.title_dashboard}"">Estadisticas</h1>
         <div id="${styles.fondo_dashboard}">
             <div class="${styles.container1}">
                 <div class="${styles.cont11}"><div>Total de visitas:<p>${
