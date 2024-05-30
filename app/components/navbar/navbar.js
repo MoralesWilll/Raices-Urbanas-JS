@@ -21,9 +21,7 @@ export function navbar() {
                 </ul>
             </div>
             <div class="${styles.container_reference}">
-                <div class="${styles.button_contact}">
-                    <button type="submit">Contactanos</button>
-                </div>
+                
                 <div class="${styles.img_user}">
                     <img id="go-to-login-from-home" src="${logo_usser}" alt="">
                 </div>

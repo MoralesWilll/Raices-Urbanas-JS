@@ -159,6 +159,60 @@
       "images": [
         "https://res.cloudinary.com/dnwpj75xg/image/upload/v1716934381/proyecto/e1eswtjakumlklc6bwmi.jpg"
       ]
+    },
+    {
+      "id": "6bcb",
+      "userid": "0f70",
+      "address": "Provenza, Poblado",
+      "name_location": "Provenza, Poblado",
+      "PropertyObjective": "1",
+      "property_type": "1",
+      "zone": "3",
+      "price": "2400000",
+      "numberRooms": "3",
+      "numberBathrooms": "2",
+      "propertySize": "500",
+      "stratum": "4",
+      "description": "Casa",
+      "images": [
+        "https://res.cloudinary.com/dnwpj75xg/image/upload/v1717097968/proyecto/gngxzelju2cwa7metuts.jpg"
+      ]
+    },
+    {
+      "id": "c385",
+      "userid": "0f70",
+      "address": "Envigado",
+      "name_location": "Envigado",
+      "PropertyObjective": "2",
+      "property_type": "2",
+      "zone": "4",
+      "price": "3000000",
+      "numberRooms": "5",
+      "numberBathrooms": "2",
+      "propertySize": "3000",
+      "stratum": "6",
+      "description": "Casa",
+      "images": [
+        "https://res.cloudinary.com/dnwpj75xg/image/upload/v1717098129/proyecto/sgdvogydwmvlv6be8prv.jpg"
+      ]
+    },
+    {
+      "id": "d798",
+      "userid": "0f70",
+      "address": "Laureles",
+      "name_location": "Laureles",
+      "PropertyObjective": "1",
+      "property_type": "1",
+      "zone": "1",
+      "price": "5000000",
+      "numberRooms": "6",
+      "numberBathrooms": "2",
+      "propertySize": "2000",
+      "stratum": "5",
+      "description": "Casa",
+      "images": [
+        "https://res.cloudinary.com/dnwpj75xg/image/upload/v1717098196/proyecto/yrpp5ubxr2gyfcvn0csz.jpg"
+      ]
     }
   ],
   "messages": [

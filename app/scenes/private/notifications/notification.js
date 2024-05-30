@@ -2,6 +2,10 @@ import styles from './notification.css';
 import img from "/app/assets/images/colombia-2722716_1920.jpg";
 import home from "/app/assets/images/home_24dp_FILL0_wght400_GRAD0_opsz24.svg";
 import mail from "/app/assets/images/mail_24dp_FILL0_wght400_GRAD0_opsz24.svg";
+import close from "/app/assets/images/cancel_24dp_FILL0_wght400_GRAD0_opsz24.svg"
+import { navigateTo } from "../../../Router";
+
+
 export async function notificationScene() {
     const root = document.getElementById('root');
     
@@ -42,7 +46,7 @@ export async function notificationScene() {
                 </div>
 
                 <div class="${styles.notifications_admin}">
-                    <img src="/mail_24dp_FILL0_wght400_GRAD0_opsz24.svg" alt="}">
+                    <img src="${mail}" alt="}">
                     <p><b>Mensaje</b>
                         <br>Cliente: Mariana Pérez Serna
                         <br>Lorem Ipsum is simply dummy
@@ -53,13 +57,16 @@ export async function notificationScene() {
             
         </div>
         <div class="${styles.img_close}">
-            <button><img src="/cancel_24dp_FILL0_wght400_GRAD0_opsz24.svg" alt="}"></button>
+            <button id="close-button-notifications"><img src="${close}" alt=""></button>
         </div>
     </main>
 </body>
     `;
     
-    //Aqui se pone la logica de esta pagina, botones que redirigen u cualquier otra cosa
+    const x = document.getElementById("close-button-notifications");
+    x.addEventListener("click", function () {
+        navigateTo("/profile");
+    });
 
 
 }
