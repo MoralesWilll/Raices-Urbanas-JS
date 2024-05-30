@@ -28,7 +28,7 @@ export function seller_profile() {
     <nav class="${styles.nav}">
         <button class="${
             styles.button_nav
-        }"><strong>Notificaciones</strong></button>
+        }" id="go_notification"><strong>Notificaciones</strong></button>
     
         <button class="${
             styles.button_nav
@@ -112,6 +112,11 @@ export function seller_profile() {
     <dialog id="modal_edit" class="${styles.modal_edit}">
     </dialog>
     `;
+
+    const button_notification = document.getElementById('go_notification');
+    button_notification.addEventListener("click", () =>{
+        navigateTo("/notfications");
+    })
 
     const button_backhome = document.getElementById("back_home");
     button_backhome.addEventListener("click", () => {
@@ -486,7 +491,7 @@ export function buyer_profile() {
     root.innerHTML = `
     ${headerProfileHtml}
     <nav class="${styles.nav}">
-        <button class="${styles.button_nav}"><strong>Notificaciones</strong></button>
+        <button class="${styles.button_nav}" id="go_notification"><strong>Notificaciones</strong></button>
     
         <button class="${styles.button_nav}" id="back_home"><strong>Volver</strong></button>
     </nav>
@@ -510,6 +515,11 @@ export function buyer_profile() {
         </div>
     </section>
     `;
+    const button_notification = document.getElementById('go_notification');
+    button_notification.addEventListener("click", () =>{
+        navigateTo("/notfications");
+    })
+
     const button_backhome = document.getElementById("back_home");
     button_backhome.addEventListener("click", () => {
         navigateTo("/home");
