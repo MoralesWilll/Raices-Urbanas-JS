@@ -329,7 +329,7 @@ export function seller_profile() {
 
             // DELETE PROPERTY
             const deleteButtons =
-                document.querySelectorAll(`.delete_butt button`);
+                document.querySelectorAll(`.delete_butt`);
 
             deleteButtons.forEach((button) => {
                 button.addEventListener("click", () => {
