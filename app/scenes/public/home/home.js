@@ -15,6 +15,8 @@ import touch from "/app/assets/images/touch_app_24dp_FILL0_wght400_GRAD0_opsz24.
 import { navigateTo } from "../../../Router";
 import { footer } from "../../../components/footer/footer";
 import { navbar } from "../../../components/navbar/navbar";
+// import video from '/app/assets/images/video_hero.mp4'
+
 
 export async function HomeScene() {
     const root = document.getElementById("root");
@@ -26,8 +28,8 @@ export async function HomeScene() {
     <body>
     <header id="home" class="${styles.header_container}"> 
         ${navbarHtml}
-        <section class="${styles.container_slider_box}">
-        
+        <section class="${styles.container_slider_box}" 
+            
         </section>
     </header>
     <main class="${styles.main_container}">
@@ -61,28 +63,28 @@ export async function HomeScene() {
                 <h2>¿Dónde quieres tu espacio?</h2>
             </div>
             <div class="${styles.contain_locations}">
-                <button class="${styles.locations}">
-                    <div class="${styles.name_locations}">
-                        <h3>Envigado</h3>
-                        <img id="go-to-properties" src="${touch}" alt="">
+                <button class="${styles.button_img_locations}" id="go-to-properties-b" class="${styles.locations}" style="background-image: url(${envigado})">
+                    <div class="${styles.name_locations}" >
+                        <h3 class="${styles.title_locations}">Laureles</h3>
+                        <img  src="${touch}" alt="">
                     </div>
                 </button>
-                <button class="${styles.locations}">
+                <button class="${styles.button_img_locations}" id="go-to-properties-c" class="${styles.locations}" style="background-image: url(${laureles})">
                     <div class="${styles.name_locations}">
-                        <h3>Laureles</h3>
-                        <img src="${touch}" alt="">
+                        <h3 class="${styles.title_locations}">Envigado</h3>
+                        <img  src="${touch}" alt="">
                     </div>
                 </button>
-                <button class="${styles.locations}">
+                <button class="${styles.button_img_locations}" id="go-to-properties-d" class="${styles.locations}" style="background-image: url(${sabaneta})">
                     <div class="${styles.name_locations}">
-                        <h3>Sabaneta</h3>
-                        <img src="${touch}" alt="">
+                        <h3 class="${styles.title_locations}">Sabaneta</h3>
+                        <img  src="${touch}" alt="">
                     </div>
                 </button>
-                <button class="${styles.locations}">
+                <button class="${styles.button_img_locations}" id="go-to-properties-e" class="${styles.locations}" style="background-image: url(${itagui})">
                     <div class="${styles.name_locations}">
-                        <h3>itagüi</h3>
-                        <img src="${touch}" alt="">
+                        <h3 class="${styles.title_locations}">itagüi</h3>
+                        <img  src="${touch}" alt="">
                     </div>
                 </button>
             </div>
@@ -105,8 +107,23 @@ export async function HomeScene() {
         navigateTo("/login");
     });
 
-    const b = document.getElementById("go-to-properties");
+    const b = document.getElementById("go-to-properties-b");
     b.addEventListener("click", function () {
+        navigateTo("/availableProperties");
+    });
+
+    const c = document.getElementById("go-to-properties-c");
+    c.addEventListener("click", function () {
+        navigateTo("/availableProperties");
+    });
+
+    const d = document.getElementById("go-to-properties-d");
+    d.addEventListener("click", function () {
+        navigateTo("/availableProperties");
+    });
+
+    const e = document.getElementById("go-to-properties-e");
+    e.addEventListener("click", function () {
         navigateTo("/availableProperties");
     });
 }

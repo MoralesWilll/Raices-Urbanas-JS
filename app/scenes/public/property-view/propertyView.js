@@ -32,65 +32,67 @@ export async function PropertyView() {
 
     </section>
     <!-- house description -->
-    <section class="${styles.seccionHouseDescription}">
-        <!-- property description -->
-        <div class="${styles.propertyDescription}">
-            <div class="${styles.houseCharacteristics}">
-                <h2 class="${styles.titleDescription}">El perpetuo, Laureles</h2>
-                <p class="${styles.priceHouses}">$ 2,300,000</p>
-            </div>
-            <div class="${styles.houseCaracteristicsPropiety}">
-                <div class="${styles.houseCaracteristics2}">
-                    <div class="${styles.betImg}">
-                        <img src="${property_AA_3401_9}" class="${styles.iconDescription}" />
-                        <div>
-                            <p class="${styles.houseDescriptionMeters}">100</p>
-                            <p class="${styles.houseDescriptionMeters}">metros</p>
+    <section class="${styles.description}">
+        <div class="${styles.seccionHouseDescription}">
+            <!-- property description -->
+            <div class="${styles.propertyDescription}">
+                <div class="${styles.houseCharacteristics}">
+                    <h2 class="${styles.titleDescription}">El perpetuo, Laureles</h2>
+                    <p class="${styles.priceHouses}">$ 2,300,000</p>
+                </div>
+                <div class="${styles.houseCaracteristicsPropiety}">
+                    <div class="${styles.houseCaracteristics2}">
+                        <div class="${styles.betImg}">
+                            <img src="${property_AA_3401_9}" class="${styles.iconDescription}" />
+                            <div>
+                                <p class="${styles.houseDescriptionMeters}">100</p>
+                                <p class="${styles.houseDescriptionMeters}">metros</p>
+                            </div>
+                        </div>
+                        <div class="${styles.betImg}">
+                            <img src="${property_AA_3401_7}" class="${styles.iconDescription}" />
+                            <div>
+                                <p class="${styles.houseDescriptionRooms}">3</p>
+                                <p class="${styles.houseDescriptionRooms}">habitaciones</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="${styles.betImg}">
-                        <img src="${property_AA_3401_7}" class="${styles.iconDescription}" />
-                        <div>
-                            <p class="${styles.houseDescriptionRooms}">3</p>
-                            <p class="${styles.houseDescriptionRooms}">habitaciones</p>
+                    <div class="${styles.houseCaracteristics2}">
+                        <div class="${styles.betImg}">
+                            <img src="${property_AA_3401_6}" class="${styles.iconDescription}" />
+                            <div>
+                                <p class="${styles.houseDescriptionBathroom}">2</p>
+                                <p class="${styles.houseDescriptionBathroom}">baños</p>
+                            </div>
+                        </div>
+                        <div class="${styles.betImg}">
+                            <img src="${property_AA_3401_8}" class="${styles.iconDescription}" />
+                            <div>
+                                <p class="${styles.houseDescriptionParking}">1</p>
+                                <p class="${styles.houseDescriptionParking}">estacionamiento</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="${styles.houseCaracteristics2}">
-                    <div class="${styles.betImg}">
-                        <img src="${property_AA_3401_6}" class="${styles.iconDescription}" />
-                        <div>
-                            <p class="${styles.houseDescriptionBathroom}">2</p>
-                            <p class="${styles.houseDescriptionBathroom}">baños</p>
-                        </div>
-                    </div>
-                    <div class="${styles.betImg}">
-                        <img src="${property_AA_3401_8}" class="${styles.iconDescription}" />
-                        <div>
-                            <p class="${styles.houseDescriptionParking}">1</p>
-                            <p class="${styles.houseDescriptionParking}">estacionamiento</p>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
 
-        <!-- buttons -->
-        <div class="${styles.buttonContainer}">
-            <button id="cita" class="${styles.button}">
-                <path
-                    d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z">
-                </path>
-                </svg><span>Agendar citas</span>
-            </button>
-            <button id="chat" class="${styles.button}">
-                <path
-                    d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z">
-                </path>
-                </svg><span class="${styles.span}">Contactar vendedor</span>
-            </button>
+            <!-- buttons -->
+            <div class="${styles.buttonContainer}">
+                <button id="cita" class="${styles.button}">
+                    <path
+                        d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z">
+                    </path>
+                    </svg><span>Agendar citas</span>
+                </button>
+                <button id="chat" class="${styles.button}">
+                    <path
+                        d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z">
+                    </path>
+                    </svg><span class="${styles.span}">Contactar vendedor</span>
+                </button>
+            </div>
         </div>
-    </section>
+    <section>
     <!-- next description -->
     <section>
         <div class="${styles.desciption}">

@@ -1,21 +1,19 @@
-import styles from './availableProperties.css';
-import imageHero from '../../../assets/images/hero.jpg';
-import imageNeighborhood from '../../../assets/images/estadio.jpg';
-import imageResult1 from '../../../assets/images/estadio.jpg';
-import iconPinLotacion from '../../../assets/images/pin.png';
-import iconArea from '../../../assets/images/area.png';
-import iconBed from '../../../assets/images/bed.png';
-import iconBath from '../../../assets/images/toilet.png';
+import styles from "./availableProperties.css";
+import imageHero from "../../../assets/images/hero.jpg";
+import imageNeighborhood from "../../../assets/images/estadio.jpg";
+import imageResult1 from "../../../assets/images/estadio.jpg";
+import iconPinLotacion from "../../../assets/images/pin.png";
+import iconArea from "../../../assets/images/area.png";
+import iconBed from "../../../assets/images/bed.png";
+import iconBath from "../../../assets/images/toilet.png";
 import { navigateTo } from "../../../Router";
 import { navbar } from "../../../components/navbar/navbar";
 import { footer } from "../../../components/footer/footer";
 
-
 export async function availablePropertiesScene() {
-    const root = document.getElementById('root');
+    const root = document.getElementById("root");
     const { html: footerHtml } = footer();
     const { html: navbarHtml } = navbar();
-
 
     root.innerHTML = `
         ${navbarHtml}
@@ -42,7 +40,7 @@ export async function availablePropertiesScene() {
 
                     <div>
                         <label for="city-select" class="${styles.category} ${styles.categoryMains}">Ciudad</label>
-                        <select name="city" id="city-select" class="${styles.bigForm}">
+                        <select class="${styles.select_category} name="city" id="city-select" class="${styles.bigForm}">
                             <option value="Medellín">Medellín</option>
                         </select>
                     </div>
@@ -51,13 +49,13 @@ export async function availablePropertiesScene() {
 
                         <div class="${styles.medium_1}">
                             <label for="neighborhood-select" class="${styles.category}">Barrio</label>
-                            <select name="neighborhood" id="neighborhood-select" class="${styles.mediumForm}">
+                            <select class="${styles.select_category} name="neighborhood" id="neighborhood-select" class="${styles.mediumForm}">
                             
                                 <option value="Laureles">Laureles</option>
 
                                 <option value="Belen">Belén</option>
 
-                                <option value="Poblado">poblado</option>
+                                <option value="Poblado">Poblado</option>
 
                             </select>
                         </div>
@@ -66,7 +64,7 @@ export async function availablePropertiesScene() {
 
                             <label for="type-select" class="${styles.category}">Tipo</label>
 
-                            <select name="typeOfAptoHouse" id="type-select" class="${styles.smallForm}">
+                            <select class="${styles.select_category} name="typeOfAptoHouse" id="type-select" class="${styles.smallForm}">
                             
                                 <option value="Apartamento">Apartamento</option>
 
@@ -77,9 +75,9 @@ export async function availablePropertiesScene() {
 
                         <div class="${styles.small_2}">
 
-                            <label for="bathroom-input" class="${styles.category}">Baños</label>
+                            <label  for="bathroom-input" class="${styles.category}">Baños</label>
 
-                            <input type="number" min="1" name="bathroom" id="bathroom-input" class="${styles.smallForm}">
+                            <input id="${styles.bathoom}" type="number" min="1" name="bathroom" id="bathroom-input" class="${styles.smallForm}">
 
                         </div>
 
@@ -97,7 +95,7 @@ export async function availablePropertiesScene() {
 
                         <label for="for-select" class="${styles.category}">Para</label>
 
-                        <select name="for" id="for-select" class="${styles.bigForm}">
+                        <select class="${styles.select_category} name="for" id="for-select" class="${styles.bigForm}">
                         
                             <option value="Arrendamiento">Arrendamiento</option>
 
@@ -109,11 +107,11 @@ export async function availablePropertiesScene() {
 
                     <div>
                         <label for="price-input" class="${styles.category} ${styles.categoryMains}">Precio</label>
-                        <p id="rangeValue">2300000</p>
+                        <p class="${styles.p_label}" id="rangeValue">2300000</p>
                         <div class="${styles.conteiner__price}">
                         <input type="range" name="price" id="priceInput" class="${styles.price_input}" min="350000" max="8000000" step="10000" value="2300000">
-                        <P>$300.000</P>
-                        <P>$8´000.000</P>
+                        <P class="${styles.p_label}">$300.000</P>
+                        <P class="${styles.p_label}">$8´000.000</P>
                         </div>
                     </div>
 
@@ -133,9 +131,7 @@ export async function availablePropertiesScene() {
 
         <!--Image of neighborhood-->
         <div class="${styles.results__neighborhoodSelect}"style="background-image: url(${imageNeighborhood})">
-
-            <h3>Laureles</h3>
-
+            <h3 id="${styles.title_arrendaminetos}">Laureles</h3>
         </div>
 
         <!--Results-->
@@ -162,7 +158,7 @@ export async function availablePropertiesScene() {
                         
                         <img src="${iconPinLotacion}" alt="" class="${styles.locationHouse__image}">
 
-                        <h4>El perpetuo, Lauresles</h4>
+                        <h4 class="${styles.title_property}">El perpetuo, Laureles</h4>
                     </div>
 
                     <p class="${styles.result__price}">2´300.000</p>
@@ -185,7 +181,7 @@ export async function availablePropertiesScene() {
                             
                             </div>
 
-                            <p class="${styles.atribute__text}"><span>3</span> Cuartos</p>
+                            <p class="${styles.atribute__text}">3 <br> Cuartos</p>
 
                         </div>
 
@@ -196,7 +192,7 @@ export async function availablePropertiesScene() {
 
                             </div>
 
-                            <p class="${styles.atribute__text}"><span>2</span> Baños</p>
+                            <p class="${styles.atribute__text}">2 <br> Baños</p>
 
                         </div>
 
@@ -236,7 +232,7 @@ export async function availablePropertiesScene() {
                         
                         <img src="${iconPinLotacion}" alt="" class="${styles.locationHouse__image}">
 
-                        <h4>El perpetuo, Lauresles</h4>
+                        <h4 class="${styles.title_property}">El perpetuo, Laureles</h4>
                     </div>
 
                     <p class="${styles.result__price}">2´300.000</p>
@@ -259,7 +255,7 @@ export async function availablePropertiesScene() {
                             
                             </div>
 
-                            <p class="${styles.atribute__text}"><span>3</span> Cuartos</p>
+                            <p class="${styles.atribute__text}">3 <br> Cuartos</p>
 
                         </div>
 
@@ -270,7 +266,7 @@ export async function availablePropertiesScene() {
 
                             </div>
 
-                            <p class="${styles.atribute__text}"><span>2</span> Baños</p>
+                            <p class="${styles.atribute__text}">2 <br> Baños</p>
 
                         </div>
 
@@ -308,7 +304,7 @@ export async function availablePropertiesScene() {
                         
                         <img src="${iconPinLotacion}" alt="" class="${styles.locationHouse__image}">
 
-                        <h4>El perpetuo, Lauresles</h4>
+                        <h4 class="${styles.title_property}">El perpetuo, Laureles</h4>
                     </div>
 
                     <p class="${styles.result__price}">2´300.000</p>
@@ -331,7 +327,7 @@ export async function availablePropertiesScene() {
                             
                             </div>
 
-                            <p class="${styles.atribute__text}"><span>3</span> Cuartos</p>
+                            <p class="${styles.atribute__text}">3 <br> Cuartos</p>
 
                         </div>
 
@@ -342,7 +338,7 @@ export async function availablePropertiesScene() {
 
                             </div>
 
-                            <p class="${styles.atribute__text}"><span>2</span> Baños</p>
+                            <p class="${styles.atribute__text}">2 <br> Baños</p>
 
                         </div>
 
@@ -382,7 +378,7 @@ export async function availablePropertiesScene() {
                         
                         <img src="${iconPinLotacion}" alt="" class="${styles.locationHouse__image}">
 
-                        <h4>El perpetuo, Lauresles</h4>
+                        <h4 class="${styles.title_property}">El perpetuo, Laureles</h4>
                     </div>
 
                     <p class="${styles.result__price}">2´300.000</p>
@@ -405,7 +401,7 @@ export async function availablePropertiesScene() {
                             
                             </div>
 
-                            <p class="${styles.atribute__text}"><span>3</span> Cuartos</p>
+                            <p class="${styles.atribute__text}">3 <br> Cuartos</p>
 
                         </div>
 
@@ -416,7 +412,7 @@ export async function availablePropertiesScene() {
 
                             </div>
 
-                            <p class="${styles.atribute__text}"><span>2</span> Baños</p>
+                            <p class="${styles.atribute__text}">2 <br> Baños</p>
 
                         </div>
 
@@ -456,7 +452,7 @@ export async function availablePropertiesScene() {
                         
                         <img src="${iconPinLotacion}" alt="" class="${styles.locationHouse__image}">
 
-                        <h4>El perpetuo, Lauresles</h4>
+                        <h4 class="${styles.title_property}">El perpetuo, Laureles</h4>
                     </div>
 
                     <p class="${styles.result__price}">2´300.000</p>
@@ -479,7 +475,7 @@ export async function availablePropertiesScene() {
                             
                             </div>
 
-                            <p class="${styles.atribute__text}"><span>3</span> Cuartos</p>
+                            <p class="${styles.atribute__text}">3 <br> Cuartos</p>
 
                         </div>
 
@@ -490,7 +486,7 @@ export async function availablePropertiesScene() {
 
                             </div>
 
-                            <p class="${styles.atribute__text}"><span>2</span> Baños</p>
+                            <p class="${styles.atribute__text}">2 <br> Baños</p>
 
                         </div>
 
@@ -529,7 +525,7 @@ export async function availablePropertiesScene() {
                         
                         <img src="${iconPinLotacion}" alt="" class="${styles.locationHouse__image}">
 
-                        <h4>El perpetuo, Lauresles</h4>
+                        <h4 class="${styles.title_property}">El perpetuo, Laureles</h4>
                     </div>
 
                     <p class="${styles.result__price}">2´300.000</p>
@@ -552,7 +548,7 @@ export async function availablePropertiesScene() {
                             
                             </div>
 
-                            <p class="${styles.atribute__text}"><span>3</span> Cuartos</p>
+                            <p class="${styles.atribute__text}">3 <br> Cuartos</p>
 
                         </div>
 
@@ -563,7 +559,7 @@ export async function availablePropertiesScene() {
 
                             </div>
 
-                            <p class="${styles.atribute__text}"><span>2</span> Baños</p>
+                            <p class="${styles.atribute__text}">2 <br> Baños</p>
 
                         </div>
 
@@ -603,7 +599,7 @@ export async function availablePropertiesScene() {
                         
                         <img src="${iconPinLotacion}" alt="" class="${styles.locationHouse__image}">
 
-                        <h4>El perpetuo, Lauresles</h4>
+                        <h4 class="${styles.title_property}">El perpetuo, Laureles</h4>
                     </div>
 
                     <p class="${styles.result__price}">2´300.000</p>
@@ -626,7 +622,7 @@ export async function availablePropertiesScene() {
                             
                             </div>
 
-                            <p class="${styles.atribute__text}"><span>3</span> Cuartos</p>
+                            <p class="${styles.atribute__text}">3 <br> Cuartos</p>
 
                         </div>
 
@@ -637,7 +633,7 @@ export async function availablePropertiesScene() {
 
                             </div>
 
-                            <p class="${styles.atribute__text}"><span>2</span> Baños</p>
+                            <p class="${styles.atribute__text}">2 <br> Baños</p>
 
                         </div>
 
@@ -677,7 +673,7 @@ export async function availablePropertiesScene() {
                         
                         <img src="${iconPinLotacion}" alt="" class="${styles.locationHouse__image}">
 
-                        <h4>El perpetuo, Lauresles</h4>
+                        <h4 class="${styles.title_property}">El perpetuo, Laureles</h4>
                     </div>
 
                     <p class="${styles.result__price}">2´300.000</p>
@@ -700,7 +696,7 @@ export async function availablePropertiesScene() {
                             
                             </div>
 
-                            <p class="${styles.atribute__text}"><span>3</span> Cuartos</p>
+                            <p class="${styles.atribute__text}">3 <br> Cuartos</p>
 
                         </div>
 
@@ -711,7 +707,7 @@ export async function availablePropertiesScene() {
 
                             </div>
 
-                            <p class="${styles.atribute__text}"><span>2</span> Baños</p>
+                            <p class="${styles.atribute__text}">2 <br> Baños</p>
 
                         </div>
 
@@ -751,7 +747,7 @@ export async function availablePropertiesScene() {
                         
                         <img src="${iconPinLotacion}" alt="" class="${styles.locationHouse__image}">
 
-                        <h4>El perpetuo, Lauresles</h4>
+                        <h4 class="${styles.title_property}">El perpetuo, Laureles</h4>
                     </div>
 
                     <p class="${styles.result__price}">2´300.000</p>
@@ -774,7 +770,7 @@ export async function availablePropertiesScene() {
                             
                             </div>
 
-                            <p class="${styles.atribute__text}"><span>3</span> Cuartos</p>
+                            <p class="${styles.atribute__text}">3 <br> Cuartos</p>
 
                         </div>
 
@@ -785,7 +781,7 @@ export async function availablePropertiesScene() {
 
                             </div>
 
-                            <p class="${styles.atribute__text}"><span>2</span> Baños</p>
+                            <p class="${styles.atribute__text}">2 <br> Baños</p>
 
                         </div>
 
@@ -817,12 +813,13 @@ export async function availablePropertiesScene() {
         navigateTo("/login");
     });
 
-    const buttons = document.getElementsByClassName("availableProperties__resultButton___SuBqR");
+    const buttons = document.getElementsByClassName(
+        "availableProperties__resultButton___SuBqR"
+    );
 
     for (const button of buttons) {
         button.addEventListener("click", function () {
             navigateTo("/propertyView");
         });
     }
-
 }

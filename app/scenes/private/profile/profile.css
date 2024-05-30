@@ -6,7 +6,7 @@
     align-items: center;
     background-color: #002147;
     width: 100%;
-    height: 100px;
+    height: 10vh;
 }
 .button_nav{
     color: black;
@@ -14,15 +14,23 @@
     font-family: "Roboto", sans-serif;
     width: 15%;
     height: 40%;
-    padding: 0;
+    padding: 30px;
     border: none;
-    border-radius: 10%/40%;
-    font-size: 18px;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .button_nav:hover{
-    box-shadow: 0 2px 2px white;
-    background-color: rgba(255, 255, 255, 0.929);
+    color: white;
+    background-color: #ff5101;
+    cursor: pointer;
 }
 /*************************SECTION_CAROUSEL*************************************/
 
@@ -63,6 +71,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 #arrow_back img:hover{
     width: 75px;
@@ -151,7 +160,7 @@
     justify-content: space-between;
     gap: 1.2rem;
     margin-top: 1.8rem;
-  }
+}
 .embla__buttons {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
@@ -188,7 +197,6 @@ width: 30%;
 height: 30%;
 color: white;
 }
-  
 
 
 /*************************SECTION_DASHBOARD*************************************/
@@ -278,20 +286,28 @@ color: white;
 /*************************BUYER_PROFILE*************************************/
 
 .section_buyer{
+    padding-top: 4rem;
     width: 100%;
-    height: 300px;
+    height: 60vh;
     background-color: #002147;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+}
+
+.title_buyer {
+    padding-bottom: 3rem;
+    font-size: 4rem;
+    color: white;
 }
 
 #buyer{
     width: 60%;
-    height: 60%;
+    height: 10%;
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    gap: 0.5rem;
 }
 
 #buyer_int{
@@ -302,16 +318,21 @@ color: white;
     justify-content: start;
     align-items: center;
     color: white;
-    font-size: 20px;
+    font-size: 3rem;
 }
 
 #buyer_int2{
     width: 50%;
-    height: 60%;
+    height: 75%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(192, 192, 192);
+    background-color: #ff5101ac;
     border-radius: 40px;
-
+    font-size: 2rem;
+    color: white;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
 }
