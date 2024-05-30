@@ -15,21 +15,20 @@ import touch from "/app/assets/images/touch_app_24dp_FILL0_wght400_GRAD0_opsz24.
 import { navigateTo } from "../../../Router";
 import { footer } from "../../../components/footer/footer";
 import { navbar } from "../../../components/navbar/navbar";
-// import video from '/app/assets/images/video_hero.mp4'
-
+import hero_home from "/app/assets/images/hero_home.jpg"
+// import video from "/app/assets/images/video_hero.mp4";
 
 export async function HomeScene() {
     const root = document.getElementById("root");
     const { html: footerHtml } = footer();
     const { html: navbarHtml } = navbar();
 
-
     root.innerHTML = `
     <body>
     <header id="home" class="${styles.header_container}"> 
         ${navbarHtml}
         <section class="${styles.container_slider_box}" 
-            
+            <img  src="${hero_home}" alt="">
         </section>
     </header>
     <main class="${styles.main_container}">
