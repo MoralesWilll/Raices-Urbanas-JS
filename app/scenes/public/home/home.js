@@ -63,25 +63,25 @@ export async function HomeScene() {
                 <h2>¿Dónde quieres tu espacio?</h2>
             </div>
             <div class="${styles.contain_locations}">
-                <button class="${styles.button_img_locations}" id="go-to-properties-b" class="${styles.locations}" style="background-image: url(${envigado})">
+                <button class="${styles.button_img_locations}" id="go-to-properties-b" class="${styles.locations}" >
                     <div class="${styles.name_locations}" >
                         <h3 class="${styles.title_locations}">Laureles</h3>
                         <img  src="${touch}" alt="">
                     </div>
                 </button>
-                <button class="${styles.button_img_locations}" id="go-to-properties-c" class="${styles.locations}" style="background-image: url(${laureles})">
+                <button class="${styles.button_img_locations}" id="go-to-properties-c" class="${styles.locations}">
                     <div class="${styles.name_locations}">
                         <h3 class="${styles.title_locations}">Envigado</h3>
                         <img  src="${touch}" alt="">
                     </div>
                 </button>
-                <button class="${styles.button_img_locations}" id="go-to-properties-d" class="${styles.locations}" style="background-image: url(${sabaneta})">
+                <button class="${styles.button_img_locations}" id="go-to-properties-d" class="${styles.locations}" >
                     <div class="${styles.name_locations}">
                         <h3 class="${styles.title_locations}">Sabaneta</h3>
                         <img  src="${touch}" alt="">
                     </div>
                 </button>
-                <button class="${styles.button_img_locations}" id="go-to-properties-e" class="${styles.locations}" style="background-image: url(${itagui})">
+                <button class="${styles.button_img_locations}" id="go-to-properties-e" class="${styles.locations}" >
                     <div class="${styles.name_locations}">
                         <h3 class="${styles.title_locations}">itagüi</h3>
                         <img  src="${touch}" alt="">

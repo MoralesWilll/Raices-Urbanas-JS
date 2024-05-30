@@ -127,6 +127,7 @@ a {
     width: 20rem;
     background-position: center;
     background-size: cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://cdn.pixabay.com/photo/2016/11/29/11/33/architecture-1869211_1280.jpg);
 }
 
 .title_locations {
