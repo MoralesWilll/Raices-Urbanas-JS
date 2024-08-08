@@ -6,6 +6,8 @@ En este proyecto, se implementa una aplicación web de una sola página (SPA) ut
 
 Algunas escenas contienen componentes reutilizables, como la barra de navegación y el footer. El proyecto está estructurado de acuerdo con las mejores prácticas de desarrollo web y utiliza tecnologías modernas para optimizar el rendimiento y la eficiencia del código.
 
+Usa un front con HTML, CSS y JavaScript y un back en Java para una conexión con la base de datos que consume para mostrar y hacer funcional el front
+
 ## Estructura del proyecto
 ```txt
 Raices-Urbanas/
